@@ -1,0 +1,49 @@
+$color-main: rgb(255, 85, 0); $color-main_hover: rgb(255, 109, 36);
+$color-green: rgb(0, 169, 88); $color-green_hover: rgb(0, 187, 97);
+$color-blue: rgb(0, 137, 236); $color-blue_hover: rgb(18, 151, 247);
+
+$color-body: rgb(22, 22, 22);
+$color-product_card: rgb(31, 31, 31); $color-product_card_light: rgb(39, 39, 39);
+$color-lvl-10: rgb(254, 31, 0);
+$color-lvl-5: rgb(239, 187, 0);
+$color-gray_light: rgb(42, 42, 42); $color-gray_light__black: rgb(35, 35, 35); $color-gray_light__light: rgb(54, 54, 54);
+
+
+
+@mixin absolute_zero {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    left: 0;
+}
+
+@mixin pos_absolute($t, $r, $b, $l) {
+    position: absolute;
+    right: $r;
+    bottom: $b;
+    top: $t;
+    left: $l;
+}
+
+@mixin flex_center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin grid($gap, $i) {
+    display: grid;
+    grid-gap: $gap;
+    grid-template-columns: repeat($i, minmax(0px, 1fr));
+}
+
+@mixin input {
+    background-color: $color-gray_light__black;
+    border: 2px solid $color-gray_light__light;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    font-size: 16px;
+    cursor: text;
+}

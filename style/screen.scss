@@ -1,0 +1,1416 @@
+@use 'base';
+
+@media screen and (max-width: 1600px) {
+    .products {
+        width: 1170px;
+        &__card {
+            min-width: 245px;
+            max-width: 240px;
+            &__top {
+                &__number {
+                    font-size: 80px;
+                    padding:  {
+                        top: 25px;
+                        left: 25px;
+                        bottom: 15px;
+                        right: 25px;
+                    };
+                }
+                &__eloContainer {
+                    &__text {
+                        &__icon {
+                            & > img {
+                                height: 20px;
+                            }
+                        }
+                        &__number {
+                            font-size: 26px;
+                        }
+                    }
+                }
+                &__information {
+                    padding: 0;
+                    &__string {
+                        &__key {
+                            font-size: 16px;
+                        }
+                        &__value {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .calculator {
+        width: 900px;
+    }
+    .footer {
+        width: calc(1170px - 46px);
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .banner {
+        width: 800px;
+    }
+    .products {
+        width: 1000px;
+        &__card {
+            width: calc(25% - 30px);
+            margin: 15px;
+            &__top {
+                &__number {
+                    font-size: 75px;
+                    padding:  {
+                        top: 25px;
+                        left: 25px;
+                        bottom: 15px;
+                        right: 25px;
+                    };
+                }
+                &__eloContainer {
+                    &__text {
+                        &__icon {
+                            display: flex;
+                            align-items: center;
+                            margin-right: 5px;
+                            & > img {
+                                height: 18px;
+                            }
+                        }
+                        &__number {
+                            font-size: 24px;
+                            line-height: 22px;
+                        }
+                    }
+                    &__progressBar {
+                        height: 12px;
+                    }
+                }
+                &__information {
+                    padding: 0;
+                    &__string {
+                        &__key {
+                            font-size: 16px;
+                        }
+                        &__value {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+            &__bottom {
+                & > button {
+                    padding: 18px;
+                    font-size: 20px;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+    .calculator {
+        width: 900px;
+    }
+    .footer {
+        width: 90%;
+        &__top {
+            padding-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            & > img {
+                height: 50px;
+            }
+            & > nav {
+                display: flex;
+                & > a {
+                    display: block;
+                    font-weight: 600;
+                    font-size: 16px;
+                    cursor: pointer;
+                    border-radius: 8px;
+                    background-color: transparent;
+                    color: rgb(220, 220, 220);
+                    padding: {
+                        top: 8px;
+                        bottom: 8px;
+                        left: 10px;
+                        right: 10px;
+                    };
+                    transition: 0.2s;
+                    &:hover {
+                        color: rgb(255, 255, 255);
+                    }
+                }
+            }
+            &__socialLink {
+                display: flex;
+                & > a {
+                    display: block;
+                    height: 50px;
+                    padding: 13px;
+                    box-sizing: border-box;
+                    border-radius: 10px;
+                    background-color: transparent;
+                    transition: 0.2s;
+                    & > img {
+                        height: 100%;
+                        &.img_vk {
+                            filter: invert(1);
+                        }
+                    }
+                    &:hover{
+                    }
+                }
+            }
+        }
+        &__bottom {
+            padding-top: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            &__copyright {
+                font-size: 14px;
+                color: rgb(180, 180, 180);
+            }
+            &__paymentMethods {
+                height: 22px;
+                & > img {
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .header {
+        padding:  {
+            top: 20px;
+            right: 20px;
+            bottom: 20px;
+            left: 20px;
+        };
+    }
+    .products {
+        width: 800px;
+        &__card {
+            width: calc(25% - 30px);
+            margin: 15px;
+            min-width: 210px;
+            max-width: 220px;
+            &__top {
+                &__number {
+                    font-size: 65px;
+                    margin-bottom: 20px;
+                    padding:  {
+                        top: 20px;
+                        left: 20px;
+                        bottom: 10px;
+                        right: 20px;
+                    };
+                }
+                &__eloContainer {
+                    &__text {
+                        &__icon {
+                            display: flex;
+                            align-items: center;
+                            margin-right: 5px;
+                            & > img {
+                                height: 16px;
+                            }
+                        }
+                        &__number {
+                            font-size: 20px;
+                            line-height: 22px;
+                        }
+                    }
+                    &__progressBar {
+                        height: 10px;
+                    }
+                }
+                &__information {
+                    margin: {
+                        top: 20px;
+                        bottom: 0px;
+                    };
+                    padding: 0;
+                    &__string {
+                        &__key {
+                            font-size: 14px;
+                        }
+                        &__value {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+            &__bottom {
+                & > button {
+                    padding: 14px;
+                    font-size: 18px;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+    .calculator {
+        width: 800px;
+    }
+    .footer {
+        width: 90%;
+        &__top {
+            padding-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            & > img {
+                height: 40px;
+            }
+            & > nav {
+                & > a {
+                    font-size: 14px;
+                    border-radius: 6px;
+                    padding: {
+                        top: 6px;
+                        bottom: 6px;
+                        left: 8px;
+                        right: 8px;
+                    };
+                }
+            }
+            &__socialLink {
+                display: flex;
+                & > a {
+                    height: 40px;
+                    padding: 10px;
+                }
+            }
+        }
+        &__bottom {
+            &__copyright {
+                font-size: 12px;
+            }
+            &__paymentMethods {
+                height: 18px;
+            }
+        }
+    }
+    .categories {
+        margin-bottom: 25px;
+        &__point {
+            width: 180px;
+            border-radius: 6px;
+            margin: {
+                right: 5px;
+                left: 5px;
+            };
+            padding: {
+                top: 8px;
+                bottom: 8px;
+            };
+            & > h2 {
+                font-size: 16px;
+                font-weight: 500;
+                cursor: pointer;
+            }
+            & > div {
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%) translateY(50%);
+                height: 0px;
+                width: 0px;
+                border-radius: 50%;
+                z-index: 1;
+                transition: 0.4s;
+            }
+            &:hover div {
+                height: 270px;
+                width: 270px;
+            }
+            &:active {
+                transform: scale(0.98);
+            }
+            &_active > div {
+                height: 270px;
+                width: 270px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .header {
+        height: 45px;
+        &__nav {
+            display: flex;
+            & a {
+                padding:  {
+                    top: 10px;
+                    bottom: 10px;
+                    right: 10px;
+                    left: 10px;
+                };
+                img {
+                    height: 22px;
+                }
+            }
+        }
+    }
+    .banner {
+        width: 650px;
+        &__information {
+            margin-bottom: 20px;
+            & > h2 {
+                text-align: center;
+                font-size: 40px;
+                font-weight: 700;
+                margin-bottom: 15px;
+            }
+            & > p { 
+                text-align: center;
+                font-size: 20px;
+                font-weight: 500;
+                // padding-right: 50px;
+            }
+        }
+    }
+    .calculator {
+        margin-top: 35px;
+        width: 600px;
+        padding: 25px;
+        &__inner {
+            &__lvlBlock {
+                margin-bottom: 20px;
+                img {
+                    width: 80px;
+                }
+            }
+            &__inputs {
+                margin-bottom: 20px;
+                & > input {
+                    @include base.input;
+                    width: 350px;
+                    height: 50px;
+                    margin: {
+                        right: 10px;
+                        left: 10px;
+                    };
+                }
+                & > button {
+                    height: 50px;
+                    width: 50px;
+                    font-size: 14px;
+                }
+            }
+            &__checkBoxes {
+                grid-template-columns: repeat(2, minmax(0px, 1fr));
+                width: calc(350px + 100px + 20px);
+                &__point {
+                    padding: 8px;
+                    & > div {
+                        & > input {
+                            &+label::before {
+                                margin-right: 8px;
+                            }
+                        }
+                        & > label {
+                            font-size: 14px;
+                        }
+                    }
+                    & > img {
+                        width: 20px;
+                    }
+                }
+            }
+            &__information {
+                grid-gap: 15px;
+                width: calc(350px + 100px + 20px);
+                &__point {
+                    padding: 15px;
+                    & > h3 {
+                        font-size: 16px;
+                        margin-bottom: 5px;
+                    }
+                    & > div {
+                        font-size: 24px;
+                        & > span {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+            &__separator {
+                width: calc(350px + 100px + 20px);
+            }
+            &__button {
+                width: 210px;
+                padding: {
+                    top: 12px;
+                    bottom: 12px;
+                };
+                font-size: 18px;
+            }
+        }
+    }
+    .footer {
+        width: 90%;
+        padding: 20px;
+        &__top {
+            padding-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            & > img {
+                height: 35px;
+            }
+            & > nav {
+                & > a {
+                    font-size: 12px;
+                    border-radius: 6px;
+                    padding: {
+                        top: 5px;
+                        bottom: 5px;
+                        left: 6px;
+                        right: 6px;
+                    };
+                }
+            }
+            &__socialLink {
+                display: flex;
+                & > a {
+                    height: 35px;
+                    padding: 8px;
+                }
+            }
+        }
+        &__bottom {
+            &__copyright {
+                font-size: 12px;
+            }
+            &__paymentMethods {
+                height: 16px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .products {
+        width: 85%;
+        &__card {
+            width: 100%;
+            margin: 0;
+            margin-bottom: 10px;
+            display: flex;
+            min-width: none;
+            max-width: none;
+
+            padding: 0;
+            &__top {
+                width: 80%;
+                display: block;
+                border-radius: 10px 10px 10px 10px;
+                padding: {
+                    top: 10px;
+                    bottom: 10px;
+                    left: 10px;
+                    right: 20px;
+                };
+                margin-right: 5px;
+                &__number {
+                    display: inline-block;
+                    font-size: 45px;
+                    margin: {
+                        top: 0px;
+                        right: 10px;
+                        bottom: 0px;
+                        left: 0px;
+                    };
+                    padding:  {
+                        top: 10px;
+                        left: 20px;
+                        bottom: 10px;
+                        right: 20px;
+                    };
+                }
+                &__eloContainer {
+                    display: inline-block;
+                    width: auto;
+                    height: 100%;
+                    margin: {
+                        right: 10px;
+                    };
+                    padding: {
+                        top: 10px;
+                        bottom: 10px;
+                        right: 0;
+                        left: 0;
+                    };
+                    &__text {
+                        &__icon {
+                            display: flex;
+                            align-items: center;
+                            margin-right: 5px;
+                            & > img {
+                                height: 16px;
+                            }
+                        }
+                        &__number {
+                            font-size: 20px;
+                            line-height: 22px;
+                        }
+                    }
+                    &__progressBar {
+                        height: 10px;
+                    }
+                }
+                &__information {
+                    float: right;
+                    width: auto;
+                    margin: {
+                        top: 0px;
+                        bottom: 0px;
+                    };
+                    padding: {
+                        top: 10px;
+                        bottom: 10px;
+                        right: 0;
+                        left: 0;
+                    };
+                    &__string {
+                        &__key {
+                            font-size: 14px;
+                        }
+                        &__value {
+                            font-size: 14px;
+                        }
+                    }
+                }
+                &__bg {
+                    display: none;
+                    visibility: hidden;
+                    opacity: 0;
+                    & img {
+                        display: none;
+                        visibility: hidden;
+                        opacity: 0;
+                    }
+                }
+                &__bg_2 {
+                    display: none;
+                    opacity: 0;
+                    visibility: hidden;
+                }
+            }
+            &__bottom {
+                width: 20%;
+                height: 94px;
+                border-radius: 10px 10px 10px 10px;
+                margin-left: 5px;
+                & > button {
+                    padding: 14px;
+                    font-size: 18px;
+                    font-weight: 700;
+                    height: 100%;
+                    border-radius: 10px 10px 10px 10px;
+                    background-color: base.$color-product_card;
+                    border: 1px base.$color-main;
+                }
+            }
+            &:hover &__bottom{
+                transform: translateY(0px);
+                border-radius: 10px 10px 10px 10px;
+            }
+            &:hover &__top{
+                border-radius: 10px 10px 10px 10px;
+                transform: translateY(0px);
+            }
+            &:hover &__top__bg{
+                transform: translateY(0px);
+                opacity: 0;
+            }
+            &:hover &__top__bg_2{
+                opacity: 0;
+            }
+        }
+        &_ready {
+            .products__card__bottom__button {
+                background-color: base.$color-product_card;
+                border: 1px dashed base.$color-main;
+            }
+        }
+        &_preOrder {
+            .products__card__bottom__button {
+                background-color: base.$color-product_card;
+                border: 1px dashed base.$color-blue;
+            }
+        }
+        &_active {
+            display: block;
+        }
+    }
+    .banner {
+        width: 650px;
+        &__information {
+            margin-bottom: 20px;
+            & > h2 {
+                text-align: center;
+                font-size: 40px;
+                font-weight: 700;
+                margin-bottom: 15px;
+            }
+            & > p { 
+                text-align: center;
+                font-size: 20px;
+                font-weight: 500;
+                // padding-right: 50px;
+            }
+        }
+    }
+    .footer {
+        width: 90%;
+        padding: 20px;
+        &__top {
+            padding-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            & > img {
+                height: 35px;
+            }
+            & > nav {
+                & > a {
+                    font-size: 12px;
+                    border-radius: 6px;
+                    padding: {
+                        top: 5px;
+                        bottom: 5px;
+                        left: 6px;
+                        right: 6px;
+                    };
+                }
+            }
+            &__socialLink {
+                display: flex;
+                & > a {
+                    height: 35px;
+                    padding: 8px;
+                }
+            }
+        }
+        &__bottom {
+            &__copyright {
+                font-size: 12px;
+            }
+            &__paymentMethods {
+                height: 16px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 740px) {
+    .products {
+        width: 90%;
+        &__card {
+            &__top {
+                width: 85%;
+                display: block;
+                border-radius: 10px 10px 10px 10px;
+                padding: {
+                    top: 8px;
+                    bottom: 8px;
+                    left: 8px;
+                    right: 18px;
+                };
+                margin-right: 5px;
+                &__number {
+                    display: inline-block;
+                    font-size: 40px;
+                    margin: {
+                        top: 0px;
+                        right: 10px;
+                        bottom: 0px;
+                        left: 0px;
+                    };
+                    padding:  {
+                        top: 8px;
+                        left: 18px;
+                        bottom: 8px;
+                        right: 18px;
+                    };
+                }
+                &__eloContainer {
+                    display: inline-block;
+                    width: auto;
+                    height: auto;
+                    margin: {
+                        right: 5px;
+                    };
+                    padding: {
+                        top: 0px;
+                        bottom: 0px;
+                        right: 0px;
+                        left: 0px;
+                    };
+                    &__text {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        &__icon {
+                            display: flex;
+                            align-items: center;
+                            margin-right: 3px;
+                            & > img {
+                                height: 12px;
+                            }
+                        }
+                        &__number {
+                            margin-left: 3px;
+                            font-size: 16px;
+                            line-height: 15px;
+                        }
+                    }
+                    &__progressBar {
+                        margin-top: 5px;
+                        height: 8px;
+                    }
+                }
+                &__information {
+                    float: right;
+                    width: auto;
+                    margin: {
+                        top: 0px;
+                        bottom: 0px;
+                    };
+                    padding: {
+                        top: 8px;
+                        bottom: 8px;
+                        right: 0;
+                        left: 0;
+                    };
+                    &__string {
+                        &__key {
+                            font-size: 14px;
+                        }
+                        &__value {
+                            font-size: 14px;
+                        }
+                    }
+                }
+                &__bg {
+                    display: none;
+                    visibility: hidden;
+                    opacity: 0;
+                    & img {
+                        display: none;
+                        visibility: hidden;
+                        opacity: 0;
+                    }
+                }
+                &__bg_2 {
+                    display: none;
+                    opacity: 0;
+                    visibility: hidden;
+                }
+            }
+            &__bottom {
+                width: 20%;
+                height: 82px;
+                border-radius: 10px 10px 10px 10px;
+                margin-left: 5px;
+                & > button {
+                    padding: 14px;
+                    font-size: 18px;
+                    font-weight: 700;
+                    height: 100%;
+                    border-radius: 10px 10px 10px 10px;
+                    background-color: base.$color-product_card;
+                    border: 1px base.$color-main;
+                }
+            }
+            &:hover &__bottom{
+                transform: translateY(0px);
+                border-radius: 10px 10px 10px 10px;
+            }
+            &:hover &__top{
+                border-radius: 10px 10px 10px 10px;
+                transform: translateY(0px);
+            }
+            &:hover &__top__bg{
+                transform: translateY(0px);
+                opacity: 0;
+            }
+            &:hover &__top__bg_2{
+                opacity: 0;
+            }
+        }
+        &_ready {
+            .products__card__bottom__button {
+                background-color: base.$color-product_card;
+                border: 1px dashed base.$color-main;
+            }
+        }
+        &_preOrder {
+            .products__card__bottom__button {
+                background-color: base.$color-product_card;
+                border: 1px dashed base.$color-blue;
+            }
+        }
+        &_active {
+            display: block;
+        }
+    }
+    .banner {
+        width: 90%;
+        &__information {
+            margin-bottom: 0px;
+            & > h2 {
+                text-align: center;
+                font-size: 35px;
+                font-weight: 700;
+                margin-bottom: 15px;
+            }
+            & > p { 
+                text-align: center;
+                font-size: 18px;
+                font-weight: 500;
+                // padding-right: 50px;
+            }
+        }
+        &__videoBlock {
+            margin-bottom: 0px;
+        }
+    }
+    .footer {
+        width: 90%;
+        padding: 20px;
+        &__top {
+            padding-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            align-items: center;
+            & > img {
+                height: 50px;
+                margin-bottom: 15px;
+            }
+            & > nav {
+                margin-bottom: 10px;
+                & > a {
+                    font-size: 12px;
+                    border-radius: 6px;
+                    padding: {
+                        top: 5px;
+                        bottom: 5px;
+                        left: 6px;
+                        right: 6px;
+                    };
+                }
+            }
+            &__socialLink {
+                display: flex;
+                & > a {
+                    height: 35px;
+                    padding: 8px;
+                }
+            }
+        }
+        &__bottom {
+            flex-direction: column;
+            &__copyright {
+                font-size: 12px;
+                margin-bottom: 10px;
+            }
+            &__paymentMethods {
+                height: 16px;
+            }
+        }
+    }
+    .categories {
+        width: 90%;
+        margin: auto;
+        margin-bottom: 20px;
+        &__point {
+            width: calc(100% - 10px);
+            border-radius: 6px;
+            margin: {
+                right: 5px;
+                left: 5px;
+            };
+            padding: {
+                top: 8px;
+                bottom: 8px;
+            };
+            & > h2 {
+                font-size: 16px;
+                font-weight: 500;
+                cursor: pointer;
+            }
+            & > div {
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%) translateY(50%);
+                height: 0px;
+                width: 0px;
+                border-radius: 50%;
+                z-index: 1;
+                transition: 0.4s;
+            }
+            &:hover div {
+                height: 270px;
+                width: 270px;
+            }
+            &:active {
+                transform: scale(0.98);
+            }
+            &_active > div {
+                height: 270px;
+                width: 270px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .categories {
+        &__point {
+            width: calc(100% - 10px);
+            border-radius: 6px;
+            margin: {
+                right: 5px;
+                left: 5px;
+            };
+            padding: {
+                top: 5px;
+                bottom: 5px;
+            };
+            & > h2 {
+                font-size: 14px;
+                font-weight: 500;
+                cursor: pointer;
+            }
+            &:hover div {
+                height: 270px;
+                width: 270px;
+            }
+            &:active {
+                transform: scale(0.98);
+            }
+            &_active > div {
+                height: 270px;
+                width: 270px;
+            }
+        }
+    }
+    .products {
+        width: 90%;
+        &__card {
+            flex-direction: column;
+            margin-bottom: 20px;
+            &__top {
+                position: relative;
+                z-index: 2;
+                width: 100%;
+                display: block;
+                border-radius: 10px 10px 5px 5px;
+                border-bottom: none;
+                padding: {
+                    top: 8px;
+                    bottom: 8px;
+                    left: 8px;
+                    right: 18px;
+                };
+                margin-right: 0px;
+                margin-bottom: 5px;
+                &__number {
+                    display: inline-block;
+                    font-size: 40px;
+                    margin: {
+                        top: 0px;
+                        right: 10px;
+                        bottom: 0px;
+                        left: 0px;
+                    };
+                    padding:  {
+                        top: 8px;
+                        left: 18px;
+                        bottom: 8px;
+                        right: 18px;
+                    };
+                }
+                &__eloContainer {
+                    display: inline-block;
+                    width: auto;
+                    height: auto;
+                    margin: {
+                        right: 5px;
+                    };
+                    padding: {
+                        top: 0px;
+                        bottom: 0px;
+                        right: 0px;
+                        left: 0px;
+                    };
+                    &__text {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        &__icon {
+                            display: flex;
+                            align-items: center;
+                            margin-right: 3px;
+                            & > img {
+                                height: 12px;
+                            }
+                        }
+                        &__number {
+                            margin-left: 3px;
+                            font-size: 16px;
+                            line-height: 15px;
+                        }
+                    }
+                    &__progressBar {
+                        margin-top: 5px;
+                        height: 8px;
+                    }
+                }
+                &__information {
+                    // display: none;
+                    float: right;
+                    width: auto;
+                    margin: {
+                        top: 0px;
+                        bottom: 0px;
+                    };
+                    padding: {
+                        top: 8px;
+                        bottom: 8px;
+                        right: 0;
+                        left: 0;
+                    };
+                    &__string {
+                        &__key {
+                            font-size: 14px;
+                        }
+                        &__value {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+            &__bottom {
+                position: relative;
+                z-index: 50;
+                width: 100%;
+                height: 50px;
+                border-radius: 5px 5px 10px 10px;
+                margin-left: 0px;
+                & > button {
+                    padding: 0px;
+                    font-size: 18px;
+                    font-weight: 700;
+                    height: 100%;
+                    border-radius: inherit;
+                    background-color: base.$color-product_card;
+                    border: 1px solid base.$color-gray_light__light;
+                    border-top: none;
+                }
+            }
+            &:hover &__bottom{
+                transform: translateY(0px);
+                border-radius: 5px 5px 10px 10px;
+            }
+            &:hover &__top{
+                border-radius: 10px 10px 5px 5px;
+                transform: translateY(0px);
+            }
+            &:hover &__top__bg{
+                transform: translateY(0px);
+                opacity: 0;
+            }
+            &:hover &__top__bg_2{
+                opacity: 0;
+            }
+        }
+        &_ready {
+            .products__card__bottom__button {
+                background-color: base.$color-product_card;
+                border: 1px solid base.$color-gray_light__light;
+            }
+        }
+        &_preOrder {
+            .products__card__bottom__button {
+                background-color: base.$color-product_card;
+                border: 1px solid base.$color-gray_light__light;
+            }
+        }
+        &_active {
+            display: block;
+        }
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .categories {
+        flex-direction: column;
+        align-items: center;
+        &__point {
+            width: 200px;
+            margin: {
+                right: 0px;
+                left: 0px;
+                bottom: 10px;
+            };
+            padding: {
+                top: 8px;
+                bottom: 8px;
+            };
+            & > h2 {
+                font-size: 14px;
+                font-weight: 500;
+                cursor: pointer;
+            }
+            &:hover div {
+                height: 270px;
+                width: 270px;
+            }
+            &:active {
+                transform: scale(0.98);
+            }
+            &_active > div {
+                height: 270px;
+                width: 270px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 435px) {
+    .footer {
+        width: 90%;
+        padding: 20px;
+        &__top {
+            padding-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            align-items: center;
+            & > img {
+                height: 50px;
+                margin-bottom: 15px;
+            }
+            & > nav {
+                margin-bottom: 10px;
+                flex-direction: column;
+                align-items: center;
+                & > a {
+                    font-size: 12px;
+                    border-radius: 6px;
+                    padding: {
+                        top: 5px;
+                        bottom: 5px;
+                        left: 6px;
+                        right: 6px;
+                    };
+                }
+            }
+            &__socialLink {
+                display: flex;
+                & > a {
+                    height: 35px;
+                    padding: 8px;
+                }
+            }
+        }
+        &__bottom {
+            flex-direction: column;
+            &__copyright {
+                font-size: 12px;
+                margin-bottom: 10px;
+            }
+            &__paymentMethods {
+                height: 16px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .products {
+        width: 90%;
+        &__card {
+            flex-direction: column;
+            margin-bottom: 20px;
+            &__top {
+                position: relative;
+                z-index: 2;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                border-radius: 10px 10px 5px 5px;
+                border-bottom: none;
+                padding: {
+                    top: 8px;
+                    bottom: 15px;
+                    left: 8px;
+                    right: 15px;
+                };
+                margin-right: 0px;
+                margin-bottom: 5px;
+                &__number {
+                    display: inline-block;
+                    font-size: 40px;
+                    margin: {
+                        top: 0px;
+                        right: 0px;
+                        bottom: 10px;
+                        left: 0px;
+                    };
+                    padding:  {
+                        top: 8px;
+                        left: 18px;
+                        bottom: 8px;
+                        right: 18px;
+                    };
+                }
+                &__eloContainer {
+                    display: inline-block;
+                    width: auto;
+                    height: auto;
+                    margin: {
+                        right: 0px;
+                        bottom: 10px;
+                    };
+                    padding: {
+                        top: 0px;
+                        bottom: 0px;
+                        right: 0px;
+                        left: 0px;
+                    };
+                    &__text {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        &__icon {
+                            display: flex;
+                            align-items: center;
+                            margin-right: 3px;
+                            & > img {
+                                height: 12px;
+                            }
+                        }
+                        &__number {
+                            margin-left: 3px;
+                            font-size: 16px;
+                            line-height: 15px;
+                        }
+                    }
+                    &__progressBar {
+                        margin-top: 5px;
+                        height: 8px;
+                    }
+                }
+                &__information {
+                    // display: none;
+                    float: right;
+                    width: auto;
+                    margin: {
+                        top: 0px;
+                        bottom: 0px;
+                    };
+                    padding: {
+                        top: 0px;
+                        bottom: 0px;
+                        right: 0;
+                        left: 0;
+                    };
+                    &__string {
+                        &__key {
+                            font-size: 14px;
+                        }
+                        &__value {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+            &__bottom {
+                position: relative;
+                z-index: 50;
+                width: 100%;
+                height: 50px;
+                border-radius: 5px 5px 10px 10px;
+                margin-left: 0px;
+                & > button {
+                    padding: 0px;
+                    font-size: 18px;
+                    font-weight: 700;
+                    height: 100%;
+                    border-radius: inherit;
+                    background-color: base.$color-product_card;
+                    border: 1px solid base.$color-gray_light__light;
+                    border-top: none;
+                }
+            }
+            &:hover &__bottom{
+                transform: translateY(0px);
+                border-radius: 5px 5px 10px 10px;
+            }
+            &:hover &__top{
+                border-radius: 10px 10px 5px 5px;
+                transform: translateY(0px);
+            }
+            &:hover &__top__bg{
+                transform: translateY(0px);
+                opacity: 0;
+            }
+            &:hover &__top__bg_2{
+                opacity: 0;
+            }
+        }
+        &_ready {
+            .products__card__bottom__button {
+                background-color: base.$color-product_card;
+                border: 1px solid base.$color-gray_light__light;
+            }
+        }
+        &_preOrder {
+            .products__card__bottom__button {
+                background-color: base.$color-product_card;
+                border: 1px solid base.$color-gray_light__light;
+            }
+        }
+        &_active {
+            display: block;
+        }
+    }
+    .header {
+        justify-content: center;
+        &__nav {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 325px) {
+    .footer {
+        width: 90%;
+        padding: 20px;
+        &__bottom {
+            flex-direction: column;
+            &__copyright {
+                font-size: 10px;
+                margin-bottom: 10px;
+            }
+            &__paymentMethods {
+                height: 14px;
+            }
+        }
+    }
+}
