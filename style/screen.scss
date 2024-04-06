@@ -1226,6 +1226,29 @@
     }
 }
 
+@media screen and (max-width: 480px) {
+    .banner {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        // flex-direction: column;
+        // width: 900px;
+        // margin: auto;
+        // margin-bottom: 30px;
+        // padding:  {
+        //     top: 100px;
+        //     // left: 90px;
+        //     // right: 90px;
+        // };
+        &__information {
+            margin-bottom: 50px;
+        }
+        &__arrowBlock {
+            display: none;
+        }
+    }
+}
+
 @media screen and (max-width: 470px) {
     .categories {
         flex-direction: column;
