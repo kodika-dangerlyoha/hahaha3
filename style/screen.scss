@@ -652,6 +652,9 @@
             display: block;
         }
     }
+    .calculator {
+        width: 600px;
+    }
     .banner {
         width: 650px;
         &__information {
@@ -862,6 +865,74 @@
         }
         &_active {
             display: block;
+        }
+    }
+    .calculator {
+        margin-top: 35px;
+        width: 90%;
+        padding: 12px;
+        padding-bottom: 20px;
+        &__inner {
+            &__lvlBlock {
+                margin-bottom: 20px;
+                img {
+                    width: 80px;
+                }
+            }
+            &__inputs {
+                margin-bottom: 20px;
+                & > input {
+                    @include base.input;
+                    width: 280px;
+                    height: 50px;
+                }
+            }
+            &__checkBoxes {
+                width: calc(280px + 100px + 20px);
+                &__point {
+                    padding: 8px;
+                    & > div {
+                        & > input {
+                            &+label::before {
+                                margin-right: 8px;
+                            }
+                        }
+                        & > label {
+                            font-size: 14px;
+                        }
+                    }
+                    & > img {
+                        width: 20px;
+                    }
+                }
+            }
+            &__information {
+                width: calc(280px + 100px + 20px);
+                &__point {
+                    padding: 12px;
+                    & > h3 {
+                        font-size: 16px;
+                        margin-bottom: 5px;
+                    }
+                    & > div {
+                        font-size: 22px;
+                        & > span {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+            &__separator {
+                width: calc(280px + 100px + 20px);
+            }
+            &__button {
+                width: 210px;
+                padding: {
+                    top: 12px;
+                    bottom: 12px;
+                };
+                font-size: 18px;
+            }
         }
     }
     .banner {
@@ -1185,6 +1256,76 @@
             &_active > div {
                 height: 270px;
                 width: 270px;
+            }
+        }
+    }
+    .calculator {
+        margin-top: 35px;
+        width: 90%;
+        padding: 12px;
+        padding-bottom: 20px;
+        &__inner {
+            &__lvlBlock {
+                margin-bottom: 20px;
+                img {
+                    width: 80px;
+                }
+            }
+            &__inputs {
+                margin-bottom: 20px;
+                & > input {
+                    @include base.input;
+                    width: 200px;
+                    height: 50px;
+                }
+            }
+            &__checkBoxes {
+                width: calc(200px + 100px + 20px);
+                &__point {
+                    padding: 8px;
+                    & > div {
+                        & > input {
+                            &+label::before {
+                                margin-right: 8px;
+                            }
+                        }
+                        & > label {
+                            font-size: 12px;
+                        }
+                    }
+                    & > img {
+                        width: 18px;
+                    }
+                }
+            }
+            &__information {
+                width: calc(200px + 100px + 20px);
+                display: flex;
+                flex-direction: column;
+                &__point {
+                    padding: 12px;
+                    & > h3 {
+                        font-size: 16px;
+                        margin-bottom: 5px;
+                    }
+                    & > div {
+                        font-size: 22px;
+                        & > span {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+            &__separator {
+                width: calc(200px + 100px + 20px);
+            }
+            &__button {
+                width: 210px;
+                padding: {
+                    top: 12px;
+                    bottom: 12px;
+                };
+                font-size: 18px;
             }
         }
     }
