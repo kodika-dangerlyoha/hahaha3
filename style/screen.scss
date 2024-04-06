@@ -505,13 +505,15 @@
             margin: 0;
             margin-bottom: 10px;
             display: flex;
-            min-width: none;
+            min-width: 0;
             max-width: none;
 
             padding: 0;
             &__top {
                 width: 80%;
-                display: block;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
                 border-radius: 10px 10px 10px 10px;
                 padding: {
                     top: 10px;
@@ -520,6 +522,11 @@
                     right: 20px;
                 };
                 margin-right: 5px;
+                &__top {
+                    display: flex;
+                    align-items: center;
+                    flex-direction: row;
+                }
                 &__number {
                     display: inline-block;
                     font-size: 45px;
@@ -721,7 +728,9 @@
         &__card {
             &__top {
                 width: 85%;
-                display: block;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
                 border-radius: 10px 10px 10px 10px;
                 padding: {
                     top: 8px;
@@ -730,6 +739,11 @@
                     right: 18px;
                 };
                 margin-right: 5px;
+                &__top {
+                    display: flex;
+                    align-items: center;
+                    flex-direction: row;
+                }
                 &__number {
                     display: inline-block;
                     font-size: 40px;
@@ -1087,7 +1101,9 @@
                 position: relative;
                 z-index: 2;
                 width: 100%;
-                display: block;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
                 border-radius: 10px 10px 5px 5px;
                 border-bottom: none;
                 padding: {
@@ -1098,6 +1114,11 @@
                 };
                 margin-right: 0px;
                 margin-bottom: 5px;
+                &__top {
+                    display: flex;
+                    align-items: center;
+                    flex-direction: row;
+                }
                 &__number {
                     display: inline-block;
                     font-size: 40px;
@@ -1429,29 +1450,42 @@
 @media screen and (max-width: 400px) {
     .products {
         width: 90%;
+        display: grid;
+        // flex-direction: row;
+        // flex-wrap: wrap;
+        grid-template-columns: repeat(2, minmax(0px, 1fr));
+        grid-gap: 10px;
         &__card {
+            width: auto;
             flex-direction: column;
             margin-bottom: 20px;
             &__top {
                 position: relative;
                 z-index: 2;
-                width: 100%;
+                width: auto;
                 display: flex;
-                flex-direction: column;
+                flex-direction: row;
+                justify-content: center;
                 align-items: center;
                 border-radius: 10px 10px 5px 5px;
                 border-bottom: none;
                 padding: {
-                    top: 8px;
-                    bottom: 15px;
-                    left: 8px;
-                    right: 15px;
+                    top: 10px;
+                    bottom: 10px;
+                    left: 10px;
+                    right: 10px;
                 };
                 margin-right: 0px;
                 margin-bottom: 5px;
+                &__top {
+                    display: flex;
+                    align-items: center;
+                    // justify-content: start;
+                    flex-direction: column;
+                }
                 &__number {
                     display: inline-block;
-                    font-size: 40px;
+                    font-size: 55px;
                     margin: {
                         top: 0px;
                         right: 0px;
@@ -1459,10 +1493,10 @@
                         left: 0px;
                     };
                     padding:  {
-                        top: 8px;
-                        left: 18px;
-                        bottom: 8px;
-                        right: 18px;
+                        top: 12px;
+                        left: 22px;
+                        bottom: 12px;
+                        right: 22px;
                     };
                 }
                 &__eloContainer {
@@ -1470,8 +1504,9 @@
                     width: auto;
                     height: auto;
                     margin: {
+                        // top: 8px;
                         right: 0px;
-                        bottom: 10px;
+                        bottom: 0px;
                     };
                     padding: {
                         top: 0px;
@@ -1488,22 +1523,25 @@
                             align-items: center;
                             margin-right: 3px;
                             & > img {
-                                height: 12px;
+                                height: 16px;
                             }
                         }
                         &__number {
                             margin-left: 3px;
-                            font-size: 16px;
+                            font-size: 20px;
                             line-height: 15px;
                         }
                     }
                     &__progressBar {
-                        margin-top: 5px;
-                        height: 8px;
+                        // display: none;
+                        margin-top: 10px;
+                        height: 10px;
                     }
                 }
                 &__information {
-                    // display: none;
+                    display: none;
+                    // background-color: base.$color-gray_light;
+                    border-radius: 10px;
                     float: right;
                     width: auto;
                     margin: {
@@ -1513,15 +1551,20 @@
                     padding: {
                         top: 0px;
                         bottom: 0px;
-                        right: 0;
-                        left: 0;
+                        right: 0px;
+                        left: 0px;
                     };
                     &__string {
+                        padding: {
+                            top: 2px;
+                            bottom: 2px;
+                        };
                         &__key {
-                            font-size: 14px;
+                            font-size: 16px;
+                            margin-right: 8px;
                         }
                         &__value {
-                            font-size: 14px;
+                            font-size: 16px;
                         }
                     }
                 }
@@ -1573,7 +1616,7 @@
             }
         }
         &_active {
-            display: block;
+            display: grid;
         }
     }
     .header {

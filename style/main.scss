@@ -311,6 +311,12 @@ footer {
                 bottom: 25px;
                 left: 25px;
             };
+            
+            &__top {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+            }
             &__number {
                 position: relative;
                 z-index: 4;
