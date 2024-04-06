@@ -1559,6 +1559,9 @@
             display: none;
         }
     }
+}
+
+@media screen and (max-width: 350px) {
     .calculator {
         margin-top: 35px;
         width: 90%;
