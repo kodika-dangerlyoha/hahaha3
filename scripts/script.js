@@ -1,8 +1,10 @@
 const full_height_screen_block = document.querySelector('#banner');
 
 if (full_height_screen_block) {
-    let windowInnerHeight = window.innerHeight;
-    full_height_screen_block.style.minHeight = `${windowInnerHeight - 120}px`;
+    if (window.innerWidth > 470) {
+        let windowInnerHeight = window.innerHeight;
+        full_height_screen_block.style.minHeight = `${windowInnerHeight - 120}px`;
+    }
 }
 
 const backgrounds = document.querySelectorAll('.bg');
@@ -55,6 +57,7 @@ function open_category(title) {
 window.addEventListener("scroll", function(){
 
     backgrounds.forEach(elem => elem.style.top = `${(this.scrollY) / 3}px`);
+    document.querySelectorAll('.scroll_show').forEach(elem => elem.style.opacity = "1");
 
     // document.querySelector('.bigImgBlock').style.transform = "translateY(" + (this.scrollY) / 2 + "px)";
     // for_scroll.style.opacity = (this.scrollY) / 300;
