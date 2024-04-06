@@ -1273,14 +1273,33 @@
             }
             &__inputs {
                 margin-bottom: 20px;
+                // flex-direction: column;
+                flex-wrap: wrap;
+                justify-content: center;
                 & > input {
                     @include base.input;
-                    width: 200px;
+                    width: 300px;
                     height: 50px;
+                    order: 1;
+                    margin-bottom: 8px;
+                    margin-right: 0;
+                    margin-left: 0;
+                }
+                & > button {
+                    order: 2;
+                    margin-left: 4px;
+                    margin-right: 4px;
+                    width: calc(150px - 4px);
+                    display: inline-block;
+                    &:nth-child(2) {
+                        order: 3;
+                    }
                 }
             }
             &__checkBoxes {
-                width: calc(200px + 100px + 20px);
+                width: 300px;
+                display: flex;
+                flex-direction: column;
                 &__point {
                     padding: 8px;
                     & > div {
@@ -1290,16 +1309,17 @@
                             }
                         }
                         & > label {
-                            font-size: 12px;
+                            font-size: 14px;
                         }
                     }
                     & > img {
+                        // display: none;
                         width: 18px;
                     }
                 }
             }
             &__information {
-                width: calc(200px + 100px + 20px);
+                width: 300px;
                 display: flex;
                 flex-direction: column;
                 &__point {
@@ -1307,9 +1327,11 @@
                     & > h3 {
                         font-size: 16px;
                         margin-bottom: 5px;
+                        text-align: center;
                     }
                     & > div {
                         font-size: 22px;
+                        text-align: center;
                         & > span {
                             font-size: 20px;
                         }
@@ -1317,7 +1339,7 @@
                 }
             }
             &__separator {
-                width: calc(200px + 100px + 20px);
+                width: 300px;
             }
             &__button {
                 width: 210px;
@@ -1535,6 +1557,101 @@
         justify-content: center;
         &__nav {
             display: none;
+        }
+    }
+    .calculator {
+        margin-top: 35px;
+        width: 90%;
+        padding: 10px;
+        padding-bottom: 20px;
+        &__inner {
+            &__lvlBlock {
+                margin-bottom: 20px;
+                img {
+                    width: 80px;
+                }
+            }
+            &__inputs {
+                
+                // flex-direction: column;
+                flex-wrap: wrap;
+                justify-content: center;
+                width: 200px;
+                margin: auto;
+                margin-bottom: 20px;
+                & > input {
+                    @include base.input;
+                    width: 200px;
+                    height: 50px;
+                    order: 1;
+                    margin-bottom: 8px;
+                    margin-right: 0;
+                    margin-left: 0;
+                }
+                & > button {
+                    order: 2;
+                    margin-left: 4px;
+                    margin-right: 4px;
+                    width: calc(100px - 8px);
+                    display: inline-block;
+                    &:nth-child(2) {
+                        order: 3;
+                    }
+                }
+            }
+            &__checkBoxes {
+                width: 200px;
+                display: flex;
+                flex-direction: column;
+                &__point {
+                    padding: 8px;
+                    & > div {
+                        & > input {
+                            &+label::before {
+                                margin-right: 8px;
+                            }
+                        }
+                        & > label {
+                            font-size: 14px;
+                        }
+                    }
+                    & > img {
+                        // display: none;
+                        width: 18px;
+                    }
+                }
+            }
+            &__information {
+                width: 200px;
+                display: flex;
+                flex-direction: column;
+                &__point {
+                    padding: 12px;
+                    & > h3 {
+                        font-size: 14px;
+                        margin-bottom: 5px;
+                        text-align: center;
+                    }
+                    & > div {
+                        font-size: 20px;
+                        text-align: center;
+                        & > span {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+            &__separator {
+                width: 200px;
+            }
+            &__button {
+                width: 210px;
+                padding: {
+                    top: 12px;
+                    bottom: 12px;
+                };
+                font-size: 18px;
+            }
         }
     }
 }
