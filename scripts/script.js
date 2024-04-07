@@ -1,8 +1,8 @@
 const full_height_screen_block = document.querySelector('#banner');
 
 if (full_height_screen_block) {
-    if (window.innerWidth > 470) {
-        let windowInnerHeight = window.innerHeight;
+    let windowInnerHeight = window.innerHeight;
+    if (windowInnerHeight > 470) {
         full_height_screen_block.style.minHeight = `${windowInnerHeight - 120}px`;
     }
 }
