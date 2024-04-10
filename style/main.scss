@@ -1082,3 +1082,182 @@ footer {
         }
     }
 }
+
+
+.productCardInfo {
+    position: relative;
+    z-index: 1;
+    margin-top: 150px;
+    transition: 0.2s;
+    opacity: 1;
+    &__information {
+        width: 1000px;
+        margin: auto;
+        &__top {
+            width: 100%;
+            display: flex;
+            margin-bottom: 20px;
+            &__this {
+                width: calc(40% - 10px);
+                margin-right: 10px;
+                padding: 10px;
+                display: flex;
+                @include base.block_appearance;
+                border-radius: 10px;
+                &__lvlBlock {
+                    background-color: base.$color-main;
+                    border-radius: 10px;
+                    margin-right: 10px;
+                    padding: {
+                        right: 30px;
+                        left: 30px;
+                    };
+                    & > span {
+                        font-weight: 700;
+                        font-size: 55px;
+                    }
+                    &_9 {
+                        background-color: base.$color-lvl-9;
+                    }
+                }
+                &__points {
+                    & > h3 {
+
+                    }
+                    & > ul {
+                        padding-left: 7px;
+                        margin: 0;
+                        & > li {
+                            font-size: 14px;
+                            color: rgb(200, 200, 200);
+                            text-indent: 5px;
+                            &._none {
+                                &::marker {
+                                    content: url(../img/icons/checkMark_time_7_7.png);
+                                }
+                            }
+                            &._true {
+                                &::marker {
+                                    content: url(../img/icons/checkMark_green_8_8.png);
+                                }
+                            }
+                            &._false {
+                                &::marker {
+                                    content: url(../img/icons/checkMark_red_7_7.png);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &__about {
+                width: calc(60% - 10px);
+                margin-left: 10px;
+                border-radius: 10px;
+                padding: 15px;
+                @include base.block_appearance;
+                & > p {
+                    font-weight: 700;
+                    color: rgb(180, 180, 180);
+                }
+            }
+        }
+        &__rankRange {
+            @include base.block_appearance;
+            border-radius: 10px;
+            padding: 15px;
+            &__points {
+                display: flex;
+                &__pointLvl {
+                    width: 10%;
+                    padding: {
+                        left: 5px;
+                        right: 5px;
+                    };
+                    margin-bottom: 10px;
+                    opacity: 0.5;
+                    & > img {
+                        transform: scale(0.9);
+                        width: 100%;
+                    }
+                    &_active {
+                        opacity: 1;
+                        & > img {
+                            transform: translateY(-10px);
+                        }
+                    }
+                }
+            }
+            &__range {
+                width: 100%;
+                background-color: base.$color-gray_light;
+                height: 5px;
+                border-radius: 2px;
+                position: relative;
+                // overflow: hidden;
+                &__progress {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    width: calc(90% - 5%);
+                    border-radius: 2px;
+                    &_ready {
+                        background-color: base.$color-main;
+                    }
+                    &_preOrder {
+                        background-color: base.$color-blue;
+                    }
+                }
+                &__thumb {
+                    position: absolute;
+                    top: -3px;
+                    bottom: -3px;
+                    left: calc(90% - 5%);
+                    width: 6px;
+                    transform: translateX(-3px);
+                    background-color: rgb(255, 255, 255);
+                    border-radius: 2px;
+                }
+                &__value {
+                    position: absolute;
+                    top: -25px;
+                    font-weight: 700;
+                    left: calc(90% - 5%);
+                    transform: translateX(-50%);
+                    font-size: 14px;
+                }
+            }
+        }
+        &__stats {
+            @include base.grid(20px, 4);
+            margin-top: 20px;
+            &__point {
+                @include base.block_appearance;
+                border-radius: 10px;
+                padding: 10px;
+                &__type {
+                    color: rgb(200, 200, 200);
+                    // color: base.$color-blue;
+                    margin-bottom: 5px;
+                }
+                &__value {
+                    font-size: 20px;
+                    font-weight: 600;
+                    &_recentResults {
+                        display: flex;
+                        & > div {
+                            margin-right: 5px;
+                            &.w {
+                                color: base.$color-w;
+                            }
+                            &.l {
+                                color: base.$color-l;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

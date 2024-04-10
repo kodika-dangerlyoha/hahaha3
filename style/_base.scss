@@ -2,11 +2,16 @@ $color-main: rgb(255, 85, 0); $color-main_hover: rgb(255, 109, 36);
 $color-green: rgb(0, 169, 88); $color-green_hover: rgb(0, 187, 97);
 $color-blue: rgb(0, 137, 236); $color-blue_hover: rgb(18, 151, 247);
 
+$color-w: #32D35A;
+$color-l: #FF002B;
+
 $color-body: rgb(22, 22, 22);
 $color-product_card: rgb(31, 31, 31); $color-product_card_light: rgb(39, 39, 39);
-$color-lvl-10: rgb(254, 31, 0);
-$color-lvl-5: rgb(239, 187, 0);
 $color-gray_light: rgb(42, 42, 42); $color-gray_light__black: rgb(35, 35, 35); $color-gray_light__light: rgb(54, 54, 54);
+
+$color-lvl-10: rgb(254, 31, 0);
+$color-lvl-9: #FF6309;
+$color-lvl-5: rgb(239, 187, 0);
 
 
 
@@ -46,4 +51,11 @@ $color-gray_light: rgb(42, 42, 42); $color-gray_light__black: rgb(35, 35, 35); $
     width: 100%;
     font-size: 16px;
     cursor: text;
+}
+
+@mixin block_appearance {
+    background-color: $color-product_card;
+    // background: linear-gradient(to bottom, $color-product_card_light, $color-product_card);
+    border: 1px solid $color-gray_light;
+    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.5), -1px -1px 5px -2px rgba(255, 255, 255, 0.2);
 }
