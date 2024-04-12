@@ -534,32 +534,11 @@
                     margin-right: 10px;
                     padding: 10px;
                     display: flex;
-                    @include base.block_appearance;
-                    border-radius: 10px;
                     &__lvlBlock {
                         display: flex;
                         flex-direction: column;
                         align-items: center;
                         margin-right: 10px;
-                        &__num {
-                            height: 100%;
-                            font-weight: 700;
-                            font-size: 55px;
-                            border-radius: 10px;
-                            padding: {
-                                right: 30px;
-                                left: 30px;
-                            };
-                            &_9 {
-                                background-color: base.$color-lvl-9;
-                            }
-                        }
-                        &__elo {
-                            display: none;
-                            font-weight: 700;
-                            margin-top: 5px;
-                        }
-                        
                     }
                     &__points {
                         & > h3 {
@@ -944,6 +923,7 @@
     }
 
     .productCardInfo {
+        margin-top: 100px;
         &__information {
             width: 80%;
             margin: auto;
@@ -1815,15 +1795,13 @@
                 width: 100%;
                 display: flex;
                 flex-direction: column;
-                margin-bottom: 20px;
+                margin-bottom: 10px;
                 &__this {
                     width: 100%;
                     margin-right: 0px;
-                    margin-bottom: 20px;
+                    margin-bottom: 10px;
                     padding: 10px;
                     display: flex;
-                    @include base.block_appearance;
-                    border-radius: 10px;
                     &__lvlBlock {
                         display: flex;
                         flex-direction: column;
@@ -1893,8 +1871,8 @@
                 }
             }
             &__stats {
-                @include base.grid(20px, 2);
-                margin-top: 20px;
+                @include base.grid(10px, 2);
+                margin-top: 10px;
                 &__point {
                     @include base.block_appearance;
                     border-radius: 10px;
