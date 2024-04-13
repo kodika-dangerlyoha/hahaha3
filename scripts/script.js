@@ -2,9 +2,9 @@ const full_height_screen_block = document.querySelector('#banner');
 
 if (full_height_screen_block) {
     let windowInnerHeight = window.innerHeight;
-    if (windowInnerHeight > 470) {
-        full_height_screen_block.style.minHeight = `${windowInnerHeight - 120}px`;
-    }
+    // if (window.innerWidth > 470) {
+        full_height_screen_block.style.minHeight = `${windowInnerHeight - 0}px`;
+    // }
 }
 
 const backgrounds = document.querySelectorAll('.bg');

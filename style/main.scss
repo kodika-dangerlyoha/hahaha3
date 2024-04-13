@@ -15,7 +15,7 @@
 // }
 
 .scroll_show {
-    opacity: 0;
+    opacity: 1;
     transition: 0.2s;
 }
 
@@ -801,13 +801,10 @@ footer {
         }
     }
     &__buyBlock {
-        width: 1000px;
+        width: 100%;
         margin: auto;
-        background-color: rgb(50, 55, 55);
-            background: linear-gradient(to bottom, base.$color-product_card_light, base.$color-product_card);
-            border: 1px solid base.$color-gray_light;
-            box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.5), -1px -1px 5px -2px rgba(255, 255, 255, 0.2);
-        border-radius: 20px;
+        @include base.block_appearance;
+        border-radius: 10px;
         padding: 20px;
         display: flex;
         justify-content: space-between;
@@ -841,7 +838,7 @@ footer {
                 display: flex;
                 align-items: center;
                 height: 100%;
-                border: 3px solid base.$color-main;
+                border: 3px solid base.$color-blue;
                 padding: {
                     left: 25px;
                     right: 25px;
@@ -866,7 +863,11 @@ footer {
                     background-color: base.$color-main_hover;
                 }
                 &_preOrder {
+                    background-color: base.$color-blue;
                     border-radius: 0px 10px 10px 0px;
+                    &:hover {
+                        background-color: base.$color-blue_hover;
+                    }
                 }
             }
         }
@@ -1114,12 +1115,13 @@ footer {
                         font-weight: 700;
                         font-size: 55px;
                         border-radius: 10px;
+                        background-color: base.$color-main;
                         padding: {
                             right: 30px;
                             left: 30px;
                         };
-                        &_9 {
-                            background-color: base.$color-lvl-9;
+                        &_preOrder {
+                            background-color: base.$color-blue;
                         }
                     }
                     &__elo {
@@ -1175,10 +1177,12 @@ footer {
             @include base.block_appearance;
             border-radius: 10px;
             padding: 15px;
+            padding-top: 10px;
             &__points {
                 display: flex;
                 &__pointLvl {
                     width: 10%;
+                    // border-right: 1px solid rgba(255, 255, 255, 0.2);
                     padding: {
                         left: 5px;
                         right: 5px;
@@ -1186,11 +1190,12 @@ footer {
                     margin-bottom: 10px;
                     opacity: 0.5;
                     & > img {
-                        transform: scale(0.9);
+                        transform: scale(0.7);
                         width: 100%;
                     }
                     &_active {
                         opacity: 1;
+                        transform: scale(0.8);
                         & > img {
                             transform: translateY(-10px);
                         }
@@ -1230,17 +1235,18 @@ footer {
                 }
                 &__value {
                     position: absolute;
-                    top: -25px;
+                    top: -30px;
                     font-weight: 700;
                     left: calc(90% - 5%);
                     transform: translateX(-50%);
-                    font-size: 14px;
+                    font-size: 16px;
                 }
             }
         }
         &__stats {
             @include base.grid(20px, 4);
             margin-top: 20px;
+            margin-bottom: 20px;
             &__point {
                 @include base.block_appearance;
                 border-radius: 10px;
