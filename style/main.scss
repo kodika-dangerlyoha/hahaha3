@@ -308,11 +308,10 @@ footer {
             transform: translateY(0px);
             padding:  {
                 top: 0px;
-                right: 25px;
-                bottom: 25px;
-                left: 25px;
+                right: 20px;
+                bottom: 15px;
+                left: 20px;
             };
-            
             &__top {
                 display: flex;
                 align-items: center;
@@ -423,7 +422,7 @@ footer {
                     padding-left: 15px;
                     margin: 0;
                     border-radius: 5px;
-                    background-color: rgba(255, 255, 255, 0.05);
+                    background-color: rgba(255, 255, 255, 0.03);
                     border: 1px solid rgba(255, 255, 255, 0.1);
                     backdrop-filter: blur(10px);
                     cursor: pointer;
