@@ -282,17 +282,23 @@ footer {
 
 .products {
     display: none;
+    grid-template-columns: repeat(4, minmax(300px, 300px));
+    grid-gap: 40px;
     justify-content: center;
-    flex-wrap: wrap;
-    width: 1300px;
+    // justify-content: center;
+    // flex-wrap: wrap;
+    width: auto;
     margin: auto;
+    // padding: {
+    //     left: 200px;
+    //     right: 200px;
+    // };
+    box-sizing: border-box;
     animation: show_products 0.5s ease-in-out 1;
     &__card {
         display: block;
-        width: calc(25% - 46px);
-        min-width: 270px;
-        max-width: 300px;
-        margin: 23px;
+        // width: calc(25% - 46px);
+        // margin: 23px;
         cursor: pointer;
         &__top {
             position: relative;
@@ -539,7 +545,7 @@ footer {
         }
     }
     &_active {
-        display: flex;
+        display: grid;
     }
     &_active.calculator {
         display: block;
@@ -547,8 +553,10 @@ footer {
 }
 
 .calculator {
+    display: none;
     margin-top: 45px;
     width: 900px;
+    margin: auto;
     padding: 30px;
     // background-color: base.$color-gray_light;
     background: linear-gradient(to bottom, base.$color-product_card_light, base.$color-product_card);

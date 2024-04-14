@@ -1,51 +1,51 @@
 @use 'base';
 
 @media screen and (max-width: 1600px) {
+    // .products {
+    //     &__card {
+    //         &__top {
+    //             &__number {
+    //                 font-size: 80px;
+    //                 padding:  {
+    //                     top: 25px;
+    //                     left: 25px;
+    //                     bottom: 15px;
+    //                     right: 25px;
+    //                 };
+    //             }
+    //             &__eloContainer {
+    //                 &__text {
+    //                     &__icon {
+    //                         & > img {
+    //                             height: 20px;
+    //                         }
+    //                     }
+    //                     &__number {
+    //                         font-size: 26px;
+    //                     }
+    //                 }
+    //             }
+    //             &__information {
+    //                 padding: 0;
+    //                 margin-top: 20px;
+    //                 & > ul {
+    //                     padding: 10px;
+    //                     padding-left: 15px;
+    //                 }
+    //                 &__string {
+    //                     &__key {
+    //                         font-size: 16px;
+    //                     }
+    //                     &__value {
+    //                         font-size: 16px;
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
     .products {
-        width: 1170px;
-        &__card {
-            min-width: 245px;
-            max-width: 240px;
-            &__top {
-                &__number {
-                    font-size: 80px;
-                    padding:  {
-                        top: 25px;
-                        left: 25px;
-                        bottom: 15px;
-                        right: 25px;
-                    };
-                }
-                &__eloContainer {
-                    &__text {
-                        &__icon {
-                            & > img {
-                                height: 20px;
-                            }
-                        }
-                        &__number {
-                            font-size: 26px;
-                        }
-                    }
-                }
-                &__information {
-                    padding: 0;
-                    margin-top: 20px;
-                    & > ul {
-                        padding: 10px;
-                        padding-left: 15px;
-                    }
-                    &__string {
-                        &__key {
-                            font-size: 16px;
-                        }
-                        &__value {
-                            font-size: 16px;
-                        }
-                    }
-                }
-            }
-        }
+        width: 90%;
     }
     .calculator {
         width: 900px;
@@ -59,61 +59,64 @@
     .banner {
         width: 800px;
     }
-    .products {
-        width: 1000px;
-        &__card {
-            width: calc(25% - 30px);
-            margin: 15px;
-            &__top {
-                &__number {
-                    font-size: 75px;
-                    padding:  {
-                        top: 25px;
-                        left: 25px;
-                        bottom: 15px;
-                        right: 25px;
-                    };
-                }
-                &__eloContainer {
-                    &__text {
-                        &__icon {
-                            display: flex;
-                            align-items: center;
-                            margin-right: 5px;
-                            & > img {
-                                height: 18px;
-                            }
-                        }
-                        &__number {
-                            font-size: 24px;
-                            line-height: 22px;
-                        }
-                    }
-                    &__progressBar {
-                        height: 12px;
-                    }
-                }
-                &__information {
-                    padding: 0;
-                    &__string {
-                        &__key {
-                            font-size: 16px;
-                        }
-                        &__value {
-                            font-size: 16px;
-                        }
-                    }
-                }
-            }
-            &__bottom {
-                & > button {
-                    padding: 18px;
-                    font-size: 20px;
-                    font-weight: 700;
-                }
-            }
-        }
-    }
+    // .products {
+    //     padding: {
+    //         left: 50px;
+    //         right: 50px;
+    //     };
+    //     &__card {
+    //         // width: calc(25% - 30px);
+    //         margin: 15px;
+    //         &__top {
+    //             &__number {
+    //                 font-size: 75px;
+    //                 padding:  {
+    //                     top: 25px;
+    //                     left: 25px;
+    //                     bottom: 15px;
+    //                     right: 25px;
+    //                 };
+    //             }
+    //             &__eloContainer {
+    //                 &__text {
+    //                     &__icon {
+    //                         display: flex;
+    //                         align-items: center;
+    //                         margin-right: 5px;
+    //                         & > img {
+    //                             height: 18px;
+    //                         }
+    //                     }
+    //                     &__number {
+    //                         font-size: 24px;
+    //                         line-height: 22px;
+    //                     }
+    //                 }
+    //                 &__progressBar {
+    //                     height: 12px;
+    //                 }
+    //             }
+    //             &__information {
+    //                 padding: 0;
+    //                 &__string {
+    //                     &__key {
+    //                         font-size: 16px;
+    //                     }
+    //                     &__value {
+    //                         font-size: 16px;
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //         &__bottom {
+    //             & > button {
+    //                 padding: 18px;
+    //                 font-size: 20px;
+    //                 font-weight: 700;
+    //             }
+    //         }
+    //     }
+    // }
     .calculator {
         width: 900px;
     }
@@ -199,12 +202,8 @@
         };
     }
     .products {
-        width: 800px;
         &__card {
-            width: calc(25% - 30px);
             margin: 15px;
-            min-width: 210px;
-            max-width: 220px;
             &__top {
                 padding:  {
                     top: 0px;
@@ -750,12 +749,6 @@
 }
 
 @media screen and (max-width: 850px) {
-    .products {
-        width: 85%;
-        &__card {
-            width: 100%;
-        }
-    }
     .calculator {
         width: 600px;
     }
@@ -821,7 +814,11 @@
 
 @media screen and (max-width: 740px) {
     .products {
-        width: 90%;
+        &__card {
+            min-width: auto;
+            max-width: none;
+            width: 210px;
+        }
     }
     .calculator {
         margin-top: 35px;
@@ -1187,13 +1184,19 @@
             &__priceblock {
                 margin-left: 0;
                 margin-top: 10px;
+                display: flex;
+                flex-direction: column;
                 &__price {
-                    margin-right: 10px;
+                    margin-right: 0px;
+                    margin-bottom: 10px;
                     font-size: 20px;
                 }
                 &__button {
+                    width: 100%;
                     padding-top: 8px;
                     padding-bottom: 8px;
+                    padding-right: 60px;
+                    padding-left: 60px;
                     height: 100%;
                     font-size: 18px;
                 }
