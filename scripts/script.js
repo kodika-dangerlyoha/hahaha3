@@ -74,6 +74,7 @@ else if (windowWidth < 481) {
         let s = 1 - (this.scrollY) / 500;
         if (s >= 0) {
             button_scroll.style.transform = `scale(${s})`;
+            button_scroll.style.opacity = `${s}`;
         }
     });
 }
