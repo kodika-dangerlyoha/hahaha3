@@ -55,6 +55,13 @@
     }
 }
 
+@media screen and (max-width: 1400px) {
+    .products {
+        grid-template-columns: repeat(3, minmax(300px, 300px));
+        grid-gap: 40px;
+    }
+}
+
 @media screen and (max-width: 1300px) {
     .banner {
         width: 800px;
@@ -202,75 +209,8 @@
         };
     }
     .products {
-        &__card {
-            margin: 15px;
-            &__top {
-                padding:  {
-                    top: 0px;
-                    right: 18px;
-                    bottom: 18px;
-                    left: 18px;
-                };
-                &__number {
-                    font-size: 65px;
-                    margin-bottom: 20px;
-                    padding:  {
-                        top: 20px;
-                        left: 20px;
-                        bottom: 10px;
-                        right: 20px;
-                    };
-                }
-                &__eloContainer {
-                    &__text {
-                        &__icon {
-                            display: flex;
-                            align-items: center;
-                            margin-right: 5px;
-                            & > img {
-                                height: 14px;
-                            }
-                        }
-                        &__number {
-                            font-size: 20px;
-                            line-height: 18px;
-                        }
-                    }
-                    &__progressBar {
-                        height: 10px;
-                    }
-                }
-                &__information {
-                    margin: {
-                        top: 20px;
-                        bottom: 0px;
-                    };
-                    padding: 0;
-                    & > ul {
-                        padding: 10px;
-                        padding-left: 15px;
-                        & > li {
-                            font-size: 12px;
-                        }
-                    }
-                    &__string {
-                        &__key {
-                            font-size: 14px;
-                        }
-                        &__value {
-                            font-size: 14px;
-                        }
-                    }
-                }
-            }
-            &__bottom {
-                & > button {
-                    padding: 14px;
-                    font-size: 18px;
-                    font-weight: 700;
-                }
-            }
-        }
+        grid-template-columns: repeat(2, minmax(290px, 290px));
+        grid-gap: 40px;
     }
     .calculator {
         width: 800px;
@@ -814,11 +754,8 @@
 
 @media screen and (max-width: 740px) {
     .products {
-        &__card {
-            min-width: auto;
-            max-width: none;
-            width: 210px;
-        }
+        grid-template-columns: repeat(2, minmax(290px, 290px));
+        grid-gap: 25px;
     }
     .calculator {
         margin-top: 35px;
@@ -1030,132 +967,227 @@
 }
 
 @media screen and (max-width: 640px) {
-    .productCardInfo {
-        &__information {
-            width: 80%;
-            margin: auto;
-            &__top {
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                margin-bottom: 10px;
-                &__this {
-                    width: 100%;
-                    margin-right: 0px;
-                    margin-bottom: 10px;
-                    padding: 10px;
-                    display: flex;
-                    &__lvlBlock {
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        margin-right: 10px;
-                        &__num {
-                            height: 100%;
-                            font-weight: 700;
-                            font-size: 55px;
-                            border-radius: 10px;
-                            padding: {
-                                right: 30px;
-                                left: 30px;
-                            };
-                            &_9 {
-                                background-color: base.$color-lvl-9;
-                            }
-                        }
-                        &__elo {
-                            display: block;
-                            font-weight: 700;
-                            margin-top: 5px;
-                        }
-                        
-                    }
-                    &__points {
-                        & > h3 {
-    
-                        }
-                        & > ul {
-                            padding-left: 7px;
-                            margin: 0;
-                            & > li {
-                                font-size: 14px;
-                                color: rgb(200, 200, 200);
-                                text-indent: 5px;
-                                &._none {
-                                    &::marker {
-                                        content: url(../img/icons/checkMark_time_7_7.png);
-                                    }
-                                }
-                                &._true {
-                                    &::marker {
-                                        content: url(../img/icons/checkMark_green_8_8.png);
-                                    }
-                                }
-                                &._false {
-                                    &::marker {
-                                        content: url(../img/icons/checkMark_red_7_7.png);
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-                &__about {
-                    width: 100%;
-                    margin-left: 0px;
-                    border-radius: 10px;
-                    padding: 15px;
-                    @include base.block_appearance;
-                    & > p {
-                        font-size: 14px;
-                        font-weight: 700;
-                        color: rgb(180, 180, 180);
-                    }
-                }
-            }
-            &__stats {
-                @include base.grid(10px, 2);
-                margin-top: 10px;
-                margin-bottom: 10px;
-                &__point {
-                    @include base.block_appearance;
-                    border-radius: 10px;
-                    padding: 10px;
-                    &__type {
-                        color: rgb(200, 200, 200);
-                        // color: base.$color-blue;
-                        margin-bottom: 5px;
-                    }
-                    &__value {
-                        font-size: 20px;
-                        font-weight: 600;
-                        &_recentResults {
-                            display: flex;
-                            & > div {
-                                margin-right: 5px;
-                                &.w {
-                                    color: base.$color-w;
-                                }
-                                &.l {
-                                    color: base.$color-l;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            &__rankRange {
-                display: none;
-            }
-        }
-    }
     .products {
-        width: 100%;
+        grid-template-columns: repeat(2, minmax(250px, 250px));
+        grid-gap: 20px;
         &__card {
             display: block;
-            margin: 10px;
+            // width: calc(25% - 46px);
+            // margin: 23px;
+            cursor: pointer;
+            &__top {
+                padding:  {
+                    top: 0px;
+                    right: 5px;
+                    bottom: 0px;
+                    left: 5px;
+                };
+                &__top {
+                }
+                &__number {
+                    font-size: 75px;
+                    margin-bottom: 20px;
+                    padding:  {
+                        top: 20px;
+                        left: 30px;
+                        bottom: 15px;
+                        right: 30px;
+                    };
+                }
+                &__eloContainer {
+                    position: relative;
+                    z-index: 4;
+                    width: 100%;
+                    // padding: 10px;
+                    // background-color: rgba(255, 255, 255, 0.05);
+                    border-radius: 10px;
+                    &__text {
+                        display: flex;
+                        justify-content: center;
+                        align-items: end;
+                        &__icon {
+                            display: flex;
+                            align-items: center;
+                            margin-right: 5px;
+                            & > img {
+                                height: 16px;
+                            }
+                        }
+                        &__number {
+                            margin-left: 5px;
+                            font-size: 26px;
+                            font-weight: 600;
+                            line-height: 22px;
+                            cursor: pointer;
+                        }
+                    }
+                    &__progressBar {
+                        width: 100%;
+                        height: 15px;
+                        background-color: rgb(48, 48, 51);
+                        margin-top: 10px;
+                        overflow: hidden;
+                        border-radius: 3px;
+                        &__inner {
+                            height: 100%;
+                            &_10lvl {
+                                background-color: base.$color-lvl-10;
+                                width: 100%;
+                            }
+                            &_9lvl {
+                                background-color: base.$color-main;
+                                width: 90%;
+                            }
+                            
+                            &_8lvl {
+                                background-color: base.$color-lvl-5;
+                                width: 80%;
+                            }
+                            &_7lvl {
+                                background-color: base.$color-lvl-5;
+                                width: 70%;
+                            }
+                            &_6lvl {
+                                background-color: base.$color-lvl-5;
+                                width: 60%;
+                            }
+                            &_5lvl {
+                                background-color: base.$color-lvl-5;
+                                width: 50%;
+                            }
+                            &_3lvl {
+                                background-color: base.$color-lvl-5;
+                                width: 30%;
+                            }
+                        }
+                    }
+                }
+                &__information {
+                    position: relative;
+                    z-index: 4;
+                    width: 100%;
+                    padding: 10px;
+                    transform: translateY(0px);
+                    // background-color: rgba(31, 31, 31, 0.3);
+                    // backdrop-filter: blur(3px);
+                    // border-radius: 10px;
+                    margin: {
+                        top: 10px;
+                        bottom: 5px;
+                    };
+                    & > ul {
+                        padding: 10px;
+                        padding-left: 15px;
+                        margin: 0;
+                        border-radius: 5px;
+                        background-color: rgba(255, 255, 255, 0.03);
+                        border: 1px solid rgba(255, 255, 255, 0.1);
+                        backdrop-filter: blur(10px);
+                        cursor: pointer;
+                        & > li {
+                            font-size: 14px;
+                            color: rgb(200, 200, 200);
+                            text-indent: 5px;
+                            padding-top: 2px;
+                            padding-bottom: 2px;
+                            &._none {
+                                &::marker {
+                                    content: url(../img/icons/checkMark_time_7_7.png);
+                                }
+                            }
+                            &._true {
+                                &::marker {
+                                    content: url(../img/icons/checkMark_green_8_8.png);
+                                }
+                            }
+                            &._false {
+                                &::marker {
+                                    content: url(../img/icons/checkMark_red_7_7.png);
+                                }
+                            }
+                        }
+                    }
+                    &__string {
+                        display: flex;
+                        justify-content: space-between;
+                        &__key {
+                            color: rgb(200, 200, 200);
+                            font-size: 18px;
+                            cursor: pointer;
+                        }
+                        &__value {
+                            font-size: 18px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+                &__bg {
+                    @include base.pos_absolute(auto, -1px, -1px, -1px);
+                    display: flex;
+                    align-items: end;
+                    z-index: 2;
+                    opacity: 0;
+                    transform: translateY(50px);
+                    transition: 0.2s;
+                    & img {
+                        width: 100%;
+                    }
+                }
+                &__bg_2 {
+                    position: absolute;
+                    z-index: 1;
+                    top: 0;
+                    left: -1px;
+                    right: -1px;
+                    bottom: 0;
+                    opacity: 0;
+                    border-radius: 20px 20px 10px 10px;
+                    transition: 0.3s;
+                    background: linear-gradient(to bottom, base.$color-product_card_light, base.$color-product_card);
+                }
+            }
+            &__bottom {
+                width: 100%;
+                transition: 0.2s;
+                overflow: hidden;
+                border-radius: 10px 10px 20px 20px;
+                & > button {
+                    box-sizing: border-box;
+                    width: 100%;
+                    display: block;
+                    border: none;
+                    background-color: base.$color-main;
+                    padding: 20px;
+                    cursor: pointer;
+                    font-size: 22px;
+                    font-weight: 700;
+                }
+            }
+            &:hover &__bottom{
+                transform: translateY(-20px);
+                border-radius: 0px 0px 20px 20px;
+            }
+            &:hover &__top{
+                border-radius: 20px 20px 0px 0px;
+                transform: translateY(-10px);
+                // border-bottom: 1px solid base.$color-main;
+            }
+            &:hover &__top__bg{
+                transform: translateY(0px);
+                opacity: 1;
+            }
+            &:hover &__top__bg_2{
+                opacity: 1;
+            }
         }
     }
+    // .products {
+    //     width: 100%;
+    //     &__card {
+    //         display: block;
+    //         margin: 10px;
+    //     }
+    // }
     .information {
         &__buyBlock {
             padding: 15px;
@@ -1237,7 +1269,180 @@
         }
     }
     .products {
-        width: 100%;
+        grid-template-columns: repeat(2, minmax(200px, 200px));
+        grid-gap: 20px;
+        &__card {
+            display: block;
+            // width: calc(25% - 46px);
+            // margin: 23px;
+            cursor: pointer;
+            &__top {
+                padding:  {
+                    top: 0px;
+                    right: 5px;
+                    bottom: 0px;
+                    left: 5px;
+                };
+                &__top {
+                }
+                &__number {
+                    font-size: 55px;
+                    margin-bottom: 10px;
+                    padding:  {
+                        top: 15px;
+                        left: 25px;
+                        bottom: 15px;
+                        right: 25px;
+                    };
+                }
+                &__eloContainer {
+                    &__text {
+                        display: flex;
+                        justify-content: center;
+                        align-items: end;
+                        &__icon {
+                            display: flex;
+                            align-items: center;
+                            margin-right: 5px;
+                            & > img {
+                                height: 12px;
+                            }
+                        }
+                        &__number {
+                            margin-left: 5px;
+                            font-size: 20px;
+                            font-weight: 600;
+                            line-height: 16px;
+                            cursor: pointer;
+                        }
+                    }
+                    &__progressBar {
+                        width: 100%;
+                        height: 10px;
+                        background-color: rgb(48, 48, 51);
+                        margin-top: 10px;
+                        overflow: hidden;
+                        border-radius: 3px;
+                    }
+                }
+                &__information {
+                    position: relative;
+                    z-index: 4;
+                    width: 100%;
+                    padding: 10px;
+                    transform: translateY(0px);
+                    // background-color: rgba(31, 31, 31, 0.3);
+                    // backdrop-filter: blur(3px);
+                    // border-radius: 10px;
+                    margin: {
+                        top: 5px;
+                        bottom: 5px;
+                    };
+                    & > ul {
+                        padding: 10px;
+                        padding-left: 15px;
+                        margin: 0;
+                        border-radius: 5px;
+                        background-color: rgba(255, 255, 255, 0.03);
+                        border: 1px solid rgba(255, 255, 255, 0.1);
+                        backdrop-filter: blur(10px);
+                        cursor: pointer;
+                        & > li {
+                            font-size: 12px;
+                            color: rgb(200, 200, 200);
+                            text-indent: 5px;
+                            padding-top: 2px;
+                            padding-bottom: 2px;
+                            &._none {
+                                &::marker {
+                                    content: url(../img/icons/checkMark_time_7_7.png);
+                                }
+                            }
+                            &._true {
+                                &::marker {
+                                    content: url(../img/icons/checkMark_green_8_8.png);
+                                }
+                            }
+                            &._false {
+                                &::marker {
+                                    content: url(../img/icons/checkMark_red_7_7.png);
+                                }
+                            }
+                        }
+                    }
+                    &__string {
+                        display: flex;
+                        justify-content: space-between;
+                        &__key {
+                            color: rgb(200, 200, 200);
+                            font-size: 18px;
+                            cursor: pointer;
+                        }
+                        &__value {
+                            font-size: 18px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+                &__bg {
+                    @include base.pos_absolute(auto, -1px, -1px, -1px);
+                    display: flex;
+                    align-items: end;
+                    z-index: 2;
+                    opacity: 0;
+                    transform: translateY(50px);
+                    transition: 0.2s;
+                    & img {
+                        width: 100%;
+                    }
+                }
+                &__bg_2 {
+                    position: absolute;
+                    z-index: 1;
+                    top: 0;
+                    left: -1px;
+                    right: -1px;
+                    bottom: 0;
+                    opacity: 0;
+                    border-radius: 20px 20px 10px 10px;
+                    transition: 0.3s;
+                    background: linear-gradient(to bottom, base.$color-product_card_light, base.$color-product_card);
+                }
+            }
+            &__bottom {
+                width: 100%;
+                transition: 0.2s;
+                overflow: hidden;
+                border-radius: 10px 10px 20px 20px;
+                & > button {
+                    box-sizing: border-box;
+                    width: 100%;
+                    display: block;
+                    border: none;
+                    background-color: base.$color-main;
+                    padding: 15px;
+                    cursor: pointer;
+                    font-size: 20px;
+                    font-weight: 700;
+                }
+            }
+            &:hover &__bottom{
+                transform: translateY(-20px);
+                border-radius: 0px 0px 20px 20px;
+            }
+            &:hover &__top{
+                border-radius: 20px 20px 0px 0px;
+                transform: translateY(-10px);
+                // border-bottom: 1px solid base.$color-main;
+            }
+            &:hover &__top__bg{
+                transform: translateY(0px);
+                opacity: 1;
+            }
+            &:hover &__top__bg_2{
+                opacity: 1;
+            }
+        }
     }
 }
 
@@ -1266,9 +1471,138 @@
         }
     }
     .products {
+        grid-template-columns: repeat(2, minmax(200px, 200px));
+        grid-gap: 20px;
         &__card {
-            margin: 10px;
-            margin-bottom: 20px;
+            display: block;
+            // width: calc(25% - 46px);
+            // margin: 23px;
+            cursor: pointer;
+            &__top {
+                padding:  {
+                    top: 0px;
+                    right: 5px;
+                    bottom: 0px;
+                    left: 5px;
+                };
+                &__top {
+                }
+                &__number {
+                    font-size: 55px;
+                    margin-bottom: 10px;
+                    padding:  {
+                        top: 15px;
+                        left: 25px;
+                        bottom: 15px;
+                        right: 25px;
+                    };
+                }
+                &__eloContainer {
+                    &__text {
+                        display: flex;
+                        justify-content: center;
+                        align-items: end;
+                        &__icon {
+                            display: flex;
+                            align-items: center;
+                            margin-right: 5px;
+                            & > img {
+                                height: 12px;
+                            }
+                        }
+                        &__number {
+                            margin-left: 5px;
+                            font-size: 20px;
+                            font-weight: 600;
+                            line-height: 16px;
+                            cursor: pointer;
+                        }
+                    }
+                    &__progressBar {
+                        width: 100%;
+                        height: 10px;
+                        background-color: rgb(48, 48, 51);
+                        margin-top: 10px;
+                        overflow: hidden;
+                        border-radius: 3px;
+                    }
+                }
+                &__information {
+                    position: relative;
+                    z-index: 4;
+                    width: 100%;
+                    padding: 10px;
+                    transform: translateY(0px);
+                    // background-color: rgba(31, 31, 31, 0.3);
+                    // backdrop-filter: blur(3px);
+                    // border-radius: 10px;
+                    margin: {
+                        top: 5px;
+                        bottom: 5px;
+                    };
+                    & > ul {
+                        padding: 10px;
+                        padding-left: 15px;
+                        margin: 0;
+                        border-radius: 5px;
+                        background-color: rgba(255, 255, 255, 0.03);
+                        border: 1px solid rgba(255, 255, 255, 0.1);
+                        backdrop-filter: blur(10px);
+                        cursor: pointer;
+                        & > li {
+                            font-size: 12px;
+                            color: rgb(200, 200, 200);
+                            text-indent: 5px;
+                            padding-top: 2px;
+                            padding-bottom: 2px;
+                            &._none {
+                                &::marker {
+                                    content: url(../img/icons/checkMark_time_7_7.png);
+                                }
+                            }
+                            &._true {
+                                &::marker {
+                                    content: url(../img/icons/checkMark_green_8_8.png);
+                                }
+                            }
+                            &._false {
+                                &::marker {
+                                    content: url(../img/icons/checkMark_red_7_7.png);
+                                }
+                            }
+                        }
+                    }
+                    &__string {
+                        display: flex;
+                        justify-content: space-between;
+                        &__key {
+                            color: rgb(200, 200, 200);
+                            font-size: 18px;
+                            cursor: pointer;
+                        }
+                        &__value {
+                            font-size: 18px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+            &:hover &__bottom{
+                transform: translateY(-20px);
+                border-radius: 0px 0px 20px 20px;
+            }
+            &:hover &__top{
+                border-radius: 20px 20px 0px 0px;
+                transform: translateY(-10px);
+                // border-bottom: 1px solid base.$color-main;
+            }
+            &:hover &__top__bg{
+                transform: translateY(0px);
+                opacity: 1;
+            }
+            &:hover &__top__bg_2{
+                opacity: 1;
+            }
         }
     }
 }
@@ -1395,6 +1729,162 @@
                     bottom: 12px;
                 };
                 font-size: 18px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .products {
+        grid-template-columns: repeat(2, minmax(170px, 170px));
+        grid-gap: 10px;
+        &__card {
+            display: block;
+            // width: calc(25% - 46px);
+            // margin: 23px;
+            cursor: pointer;
+            &__top {
+                margin-bottom: 5px;
+                padding:  {
+                    top: 0px;
+                    right: 5px;
+                    bottom: 0px;
+                    left: 5px;
+                };
+                &__top {
+                }
+                &__number {
+                    font-size: 45px;
+                    margin-bottom: 10px;
+                    padding:  {
+                        top: 10px;
+                        left: 20px;
+                        bottom: 10px;
+                        right: 20px;
+                    };
+                }
+                &__eloContainer {
+                    &__text {
+                        display: flex;
+                        justify-content: center;
+                        align-items: end;
+                        &__icon {
+                            display: flex;
+                            align-items: center;
+                            margin-right: 5px;
+                            & > img {
+                                height: 10px;
+                            }
+                        }
+                        &__number {
+                            margin-left: 5px;
+                            font-size: 18px;
+                            font-weight: 600;
+                            line-height: 14px;
+                            cursor: pointer;
+                        }
+                    }
+                    &__progressBar {
+                        width: 100%;
+                        height: 8px;
+                        background-color: rgb(48, 48, 51);
+                        margin-top: 5px;
+                        overflow: hidden;
+                        border-radius: 3px;
+                    }
+                }
+                &__information {
+                    position: relative;
+                    z-index: 4;
+                    width: 100%;
+                    padding: 0px;
+                    transform: translateY(0px);
+                    // background-color: rgba(31, 31, 31, 0.3);
+                    // backdrop-filter: blur(3px);
+                    // border-radius: 10px;
+                    margin: {
+                        top: 10px;
+                        bottom: 5px;
+                    };
+                    & > ul {
+                        padding: 10px;
+                        padding-left: 15px;
+                        margin: 0;
+                        border-radius: 5px;
+                        background-color: rgba(255, 255, 255, 0.03);
+                        border: 1px solid rgba(255, 255, 255, 0.1);
+                        backdrop-filter: blur(10px);
+                        cursor: pointer;
+                        & > li {
+                            font-size: 10px;
+                            color: rgb(200, 200, 200);
+                            text-indent: 5px;
+                            padding-top: 2px;
+                            padding-bottom: 2px;
+                            &._none {
+                                &::marker {
+                                    content: url(../img/icons/checkMark_time_7_7.png);
+                                }
+                            }
+                            &._true {
+                                &::marker {
+                                    content: url(../img/icons/checkMark_green_8_8.png);
+                                }
+                            }
+                            &._false {
+                                &::marker {
+                                    content: url(../img/icons/checkMark_red_7_7.png);
+                                }
+                            }
+                        }
+                    }
+                    &__string {
+                        display: flex;
+                        justify-content: space-between;
+                        &__key {
+                            color: rgb(200, 200, 200);
+                            font-size: 18px;
+                            cursor: pointer;
+                        }
+                        &__value {
+                            font-size: 18px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+            &__bottom {
+                width: 100%;
+                transition: 0.2s;
+                overflow: hidden;
+                border-radius: 10px 10px 20px 20px;
+                & > button {
+                    box-sizing: border-box;
+                    width: 100%;
+                    display: block;
+                    border: none;
+                    background-color: base.$color-main;
+                    padding: 10px;
+                    cursor: pointer;
+                    font-size: 18px;
+                    font-weight: 700;
+                }
+            }
+            &:hover &__bottom{
+                transform: translateY(-20px);
+                border-radius: 0px 0px 20px 20px;
+            }
+            &:hover &__top{
+                border-radius: 20px 20px 0px 0px;
+                transform: translateY(-10px);
+                // border-bottom: 1px solid base.$color-main;
+            }
+            &:hover &__top__bg{
+                transform: translateY(0px);
+                opacity: 1;
+            }
+            &:hover &__top__bg_2{
+                opacity: 1;
             }
         }
     }
@@ -1685,6 +2175,161 @@
         justify-content: center;
         &__nav {
             display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .products {
+        grid-template-columns: repeat(2, minmax(140px, 140px));
+        grid-gap: 10px;
+        &__card {
+            display: block;
+            // width: calc(25% - 46px);
+            // margin: 23px;
+            cursor: pointer;
+            &__top {
+                padding:  {
+                    top: 0px;
+                    right: 5px;
+                    bottom: 0px;
+                    left: 5px;
+                };
+                &__top {
+                }
+                &__number {
+                    font-size: 35px;
+                    margin-bottom: 10px;
+                    padding:  {
+                        top: 5px;
+                        left: 15px;
+                        bottom: 5px;
+                        right: 15px;
+                    };
+                }
+                &__eloContainer {
+                    &__text {
+                        display: flex;
+                        justify-content: center;
+                        align-items: end;
+                        &__icon {
+                            display: flex;
+                            align-items: center;
+                            margin-right: 5px;
+                            & > img {
+                                height: 10px;
+                            }
+                        }
+                        &__number {
+                            margin-left: 5px;
+                            font-size: 16px;
+                            font-weight: 600;
+                            line-height: 12px;
+                            cursor: pointer;
+                        }
+                    }
+                    &__progressBar {
+                        width: 100%;
+                        height: 8px;
+                        background-color: rgb(48, 48, 51);
+                        margin-top: 10px;
+                        overflow: hidden;
+                        border-radius: 3px;
+                    }
+                }
+                &__information {
+                    position: relative;
+                    z-index: 4;
+                    width: 100%;
+                    padding: 0px;
+                    transform: translateY(0px);
+                    // background-color: rgba(31, 31, 31, 0.3);
+                    // backdrop-filter: blur(3px);
+                    // border-radius: 10px;
+                    margin: {
+                        top: 10px;
+                        bottom: 5px;
+                    };
+                    & > ul {
+                        padding: 10px;
+                        padding-left: 15px;
+                        margin: 0;
+                        border-radius: 5px;
+                        background-color: rgba(255, 255, 255, 0.03);
+                        border: 1px solid rgba(255, 255, 255, 0.1);
+                        backdrop-filter: blur(10px);
+                        cursor: pointer;
+                        & > li {
+                            font-size: 10px;
+                            color: rgb(200, 200, 200);
+                            text-indent: 5px;
+                            padding-top: 2px;
+                            padding-bottom: 2px;
+                            &._none {
+                                &::marker {
+                                    content: url(../img/icons/checkMark_time_7_7.png);
+                                }
+                            }
+                            &._true {
+                                &::marker {
+                                    content: url(../img/icons/checkMark_green_8_8.png);
+                                }
+                            }
+                            &._false {
+                                &::marker {
+                                    content: url(../img/icons/checkMark_red_7_7.png);
+                                }
+                            }
+                        }
+                    }
+                    &__string {
+                        display: flex;
+                        justify-content: space-between;
+                        &__key {
+                            color: rgb(200, 200, 200);
+                            font-size: 18px;
+                            cursor: pointer;
+                        }
+                        &__value {
+                            font-size: 18px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+            &__bottom {
+                width: 100%;
+                transition: 0.2s;
+                overflow: hidden;
+                border-radius: 10px 10px 10px 10px;
+                & > button {
+                    box-sizing: border-box;
+                    width: 100%;
+                    display: block;
+                    border: none;
+                    background-color: base.$color-main;
+                    padding: 5px;
+                    cursor: pointer;
+                    font-size: 18px;
+                    font-weight: 700;
+                }
+            }
+            &:hover &__bottom{
+                transform: translateY(-20px);
+                border-radius: 0px 0px 20px 20px;
+            }
+            &:hover &__top{
+                border-radius: 20px 20px 0px 0px;
+                transform: translateY(-10px);
+                // border-bottom: 1px solid base.$color-main;
+            }
+            &:hover &__top__bg{
+                transform: translateY(0px);
+                opacity: 1;
+            }
+            &:hover &__top__bg_2{
+                opacity: 1;
+            }
         }
     }
 }
@@ -2060,6 +2705,159 @@
                     height: 100%;
                     font-size: 18px;
                 }
+            }
+        }
+    }
+    .products {
+        grid-template-columns: repeat(1, minmax(200px, 200px));
+        grid-gap: 10px;
+        &__card {
+            display: block;
+            // width: calc(25% - 46px);
+            // margin: 23px;
+            cursor: pointer;
+            &__top {
+                margin-bottom: 5px;
+                padding:  {
+                    top: 0px;
+                    right: 5px;
+                    bottom: 0px;
+                    left: 5px;
+                };
+                &__top {
+                }
+                &__number {
+                    font-size: 45px;
+                    margin-bottom: 10px;
+                    padding:  {
+                        top: 10px;
+                        left: 20px;
+                        bottom: 10px;
+                        right: 20px;
+                    };
+                }
+                &__eloContainer {
+                    &__text {
+                        display: flex;
+                        justify-content: center;
+                        align-items: end;
+                        &__icon {
+                            display: flex;
+                            align-items: center;
+                            margin-right: 5px;
+                            & > img {
+                                height: 10px;
+                            }
+                        }
+                        &__number {
+                            margin-left: 5px;
+                            font-size: 18px;
+                            font-weight: 600;
+                            line-height: 14px;
+                            cursor: pointer;
+                        }
+                    }
+                    &__progressBar {
+                        width: 100%;
+                        height: 8px;
+                        background-color: rgb(48, 48, 51);
+                        margin-top: 10px;
+                        overflow: hidden;
+                        border-radius: 3px;
+                    }
+                }
+                &__information {
+                    position: relative;
+                    z-index: 4;
+                    width: 100%;
+                    padding: 0px;
+                    transform: translateY(0px);
+                    // background-color: rgba(31, 31, 31, 0.3);
+                    // backdrop-filter: blur(3px);
+                    // border-radius: 10px;
+                    margin: {
+                        top: 10px;
+                        bottom: 5px;
+                    };
+                    & > ul {
+                        padding: 10px;
+                        padding-left: 15px;
+                        margin: 0;
+                        border-radius: 5px;
+                        background-color: rgba(255, 255, 255, 0.03);
+                        border: 1px solid rgba(255, 255, 255, 0.1);
+                        backdrop-filter: blur(10px);
+                        cursor: pointer;
+                        & > li {
+                            font-size: 10px;
+                            color: rgb(200, 200, 200);
+                            text-indent: 5px;
+                            padding-top: 2px;
+                            padding-bottom: 2px;
+                            &._none {
+                                &::marker {
+                                    content: url(../img/icons/checkMark_time_7_7.png);
+                                }
+                            }
+                            &._true {
+                                &::marker {
+                                    content: url(../img/icons/checkMark_green_8_8.png);
+                                }
+                            }
+                            &._false {
+                                &::marker {
+                                    content: url(../img/icons/checkMark_red_7_7.png);
+                                }
+                            }
+                        }
+                    }
+                    &__string {
+                        display: flex;
+                        justify-content: space-between;
+                        &__key {
+                            color: rgb(200, 200, 200);
+                            font-size: 18px;
+                            cursor: pointer;
+                        }
+                        &__value {
+                            font-size: 18px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+            &__bottom {
+                width: 100%;
+                transition: 0.2s;
+                overflow: hidden;
+                border-radius: 10px 10px 20px 20px;
+                & > button {
+                    box-sizing: border-box;
+                    width: 100%;
+                    display: block;
+                    border: none;
+                    background-color: base.$color-main;
+                    padding: 10px;
+                    cursor: pointer;
+                    font-size: 18px;
+                    font-weight: 700;
+                }
+            }
+            &:hover &__bottom{
+                transform: translateY(-20px);
+                border-radius: 0px 0px 20px 20px;
+            }
+            &:hover &__top{
+                border-radius: 20px 20px 0px 0px;
+                transform: translateY(-10px);
+                // border-bottom: 1px solid base.$color-main;
+            }
+            &:hover &__top__bg{
+                transform: translateY(0px);
+                opacity: 1;
+            }
+            &:hover &__top__bg_2{
+                opacity: 1;
             }
         }
     }
