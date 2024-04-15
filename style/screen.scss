@@ -1,49 +1,6 @@
 @use 'base';
 
 @media screen and (max-width: 1600px) {
-    // .products {
-    //     &__card {
-    //         &__top {
-    //             &__number {
-    //                 font-size: 80px;
-    //                 padding:  {
-    //                     top: 25px;
-    //                     left: 25px;
-    //                     bottom: 15px;
-    //                     right: 25px;
-    //                 };
-    //             }
-    //             &__eloContainer {
-    //                 &__text {
-    //                     &__icon {
-    //                         & > img {
-    //                             height: 20px;
-    //                         }
-    //                     }
-    //                     &__number {
-    //                         font-size: 26px;
-    //                     }
-    //                 }
-    //             }
-    //             &__information {
-    //                 padding: 0;
-    //                 margin-top: 20px;
-    //                 & > ul {
-    //                     padding: 10px;
-    //                     padding-left: 15px;
-    //                 }
-    //                 &__string {
-    //                     &__key {
-    //                         font-size: 16px;
-    //                     }
-    //                     &__value {
-    //                         font-size: 16px;
-    //                     }
-    //                 }
-    //             }
-    //         }
-    //     }
-    // }
     .products {
         width: 90%;
     }
@@ -66,64 +23,6 @@
     .banner {
         width: 800px;
     }
-    // .products {
-    //     padding: {
-    //         left: 50px;
-    //         right: 50px;
-    //     };
-    //     &__card {
-    //         // width: calc(25% - 30px);
-    //         margin: 15px;
-    //         &__top {
-    //             &__number {
-    //                 font-size: 75px;
-    //                 padding:  {
-    //                     top: 25px;
-    //                     left: 25px;
-    //                     bottom: 15px;
-    //                     right: 25px;
-    //                 };
-    //             }
-    //             &__eloContainer {
-    //                 &__text {
-    //                     &__icon {
-    //                         display: flex;
-    //                         align-items: center;
-    //                         margin-right: 5px;
-    //                         & > img {
-    //                             height: 18px;
-    //                         }
-    //                     }
-    //                     &__number {
-    //                         font-size: 24px;
-    //                         line-height: 22px;
-    //                     }
-    //                 }
-    //                 &__progressBar {
-    //                     height: 12px;
-    //                 }
-    //             }
-    //             &__information {
-    //                 padding: 0;
-    //                 &__string {
-    //                     &__key {
-    //                         font-size: 16px;
-    //                     }
-    //                     &__value {
-    //                         font-size: 16px;
-    //                     }
-    //                 }
-    //             }
-    //         }
-    //         &__bottom {
-    //             & > button {
-    //                 padding: 18px;
-    //                 font-size: 20px;
-    //                 font-weight: 700;
-    //             }
-    //         }
-    //     }
-    // }
     .calculator {
         width: 900px;
     }
@@ -366,21 +265,6 @@
     .products {
         &__card {
             pointer-events: none;
-            // &:hover &__bottom{
-            //     transform: translateY(0px);
-            //     border-radius: 10px 10px 20px 20px;
-            // }
-            // &:hover &__top{
-            //     border-radius: 20px 20px 10px 10px;
-            //     transform: translateY(0px);
-            // }
-            // &:hover &__top__bg{
-            //     transform: translateY(0px);
-            //     opacity: 0;
-            // }
-            // &:hover &__top__bg_2{
-            //     opacity: 0;
-            // }
         }
     }
 }
@@ -629,7 +513,7 @@
                             }
                         }
                         &__elo {
-                            display: none;
+                            display: block;
                             font-weight: 700;
                             margin-top: 5px;
                         }
@@ -676,6 +560,9 @@
                         color: rgb(180, 180, 180);
                     }
                 }
+            }
+            &__rankRange {
+                display: none;
             }
             &__stats {
                 @include base.grid(20px, 2);
@@ -997,7 +884,6 @@
             display: block;
             // width: calc(25% - 46px);
             // margin: 23px;
-            cursor: pointer;
             &__top {
                 padding:  {
                     top: 0px;
@@ -1021,8 +907,6 @@
                     position: relative;
                     z-index: 4;
                     width: 100%;
-                    // padding: 10px;
-                    // background-color: rgba(255, 255, 255, 0.05);
                     border-radius: 10px;
                     &__text {
                         display: flex;
@@ -1047,41 +931,9 @@
                     &__progressBar {
                         width: 100%;
                         height: 15px;
-                        background-color: rgb(48, 48, 51);
                         margin-top: 10px;
-                        overflow: hidden;
-                        border-radius: 3px;
                         &__inner {
                             height: 100%;
-                            &_10lvl {
-                                background-color: base.$color-lvl-10;
-                                width: 100%;
-                            }
-                            &_9lvl {
-                                background-color: base.$color-main;
-                                width: 90%;
-                            }
-                            
-                            &_8lvl {
-                                background-color: base.$color-lvl-5;
-                                width: 80%;
-                            }
-                            &_7lvl {
-                                background-color: base.$color-lvl-5;
-                                width: 70%;
-                            }
-                            &_6lvl {
-                                background-color: base.$color-lvl-5;
-                                width: 60%;
-                            }
-                            &_5lvl {
-                                background-color: base.$color-lvl-5;
-                                width: 50%;
-                            }
-                            &_3lvl {
-                                background-color: base.$color-lvl-5;
-                                width: 30%;
-                            }
                         }
                     }
                 }
@@ -1091,9 +943,6 @@
                     width: 100%;
                     padding: 10px;
                     transform: translateY(0px);
-                    // background-color: rgba(31, 31, 31, 0.3);
-                    // backdrop-filter: blur(3px);
-                    // border-radius: 10px;
                     margin: {
                         top: 10px;
                         bottom: 5px;
@@ -1102,32 +951,12 @@
                         padding: 10px;
                         padding-left: 15px;
                         margin: 0;
-                        border-radius: 5px;
-                        background-color: rgba(255, 255, 255, 0.03);
-                        border: 1px solid rgba(255, 255, 255, 0.1);
-                        backdrop-filter: blur(10px);
-                        cursor: pointer;
                         & > li {
                             font-size: 14px;
                             color: rgb(200, 200, 200);
                             text-indent: 5px;
                             padding-top: 2px;
                             padding-bottom: 2px;
-                            &._none {
-                                &::marker {
-                                    content: url(../img/icons/checkMark_time_7_7.png);
-                                }
-                            }
-                            &._true {
-                                &::marker {
-                                    content: url(../img/icons/checkMark_green_8_8.png);
-                                }
-                            }
-                            &._false {
-                                &::marker {
-                                    content: url(../img/icons/checkMark_red_7_7.png);
-                                }
-                            }
                         }
                     }
                     &__string {
@@ -1186,31 +1015,8 @@
                     font-weight: 700;
                 }
             }
-            &:hover &__bottom{
-                transform: translateY(-20px);
-                border-radius: 0px 0px 20px 20px;
-            }
-            &:hover &__top{
-                border-radius: 20px 20px 0px 0px;
-                transform: translateY(-10px);
-                // border-bottom: 1px solid base.$color-main;
-            }
-            &:hover &__top__bg{
-                transform: translateY(0px);
-                opacity: 1;
-            }
-            &:hover &__top__bg_2{
-                opacity: 1;
-            }
         }
     }
-    // .products {
-    //     width: 100%;
-    //     &__card {
-    //         display: block;
-    //         margin: 10px;
-    //     }
-    // }
     .information {
         &__buyBlock {
             padding: 15px;
@@ -1255,6 +1061,26 @@
                     height: 100%;
                     font-size: 18px;
                 }
+            }
+        }
+    }
+    .productCardInfo {
+        &__information {
+            &__top {
+                margin-bottom: 10px;
+                &__this {
+                    margin-right: 0px;
+                    margin-bottom: 10px;
+                }
+                &__about {
+                    margin-left: 0px;
+                    margin-bottom: 0px;
+                }
+            }
+            &__stats {
+                @include base.grid(10px, 2);
+                margin-top: 10px;
+                margin-bottom: 10px;
             }
         }
     }
@@ -1342,7 +1168,6 @@
                     &__progressBar {
                         width: 100%;
                         height: 10px;
-                        background-color: rgb(48, 48, 51);
                         margin-top: 10px;
                         overflow: hidden;
                         border-radius: 3px;
@@ -1354,9 +1179,6 @@
                     width: 100%;
                     padding: 10px;
                     transform: translateY(0px);
-                    // background-color: rgba(31, 31, 31, 0.3);
-                    // backdrop-filter: blur(3px);
-                    // border-radius: 10px;
                     margin: {
                         top: 5px;
                         bottom: 5px;
@@ -1365,32 +1187,12 @@
                         padding: 10px;
                         padding-left: 15px;
                         margin: 0;
-                        border-radius: 5px;
-                        background-color: rgba(255, 255, 255, 0.03);
-                        border: 1px solid rgba(255, 255, 255, 0.1);
-                        backdrop-filter: blur(10px);
-                        cursor: pointer;
                         & > li {
                             font-size: 12px;
                             color: rgb(200, 200, 200);
                             text-indent: 5px;
                             padding-top: 2px;
                             padding-bottom: 2px;
-                            &._none {
-                                &::marker {
-                                    content: url(../img/icons/checkMark_time_7_7.png);
-                                }
-                            }
-                            &._true {
-                                &::marker {
-                                    content: url(../img/icons/checkMark_green_8_8.png);
-                                }
-                            }
-                            &._false {
-                                &::marker {
-                                    content: url(../img/icons/checkMark_red_7_7.png);
-                                }
-                            }
                         }
                     }
                     &__string {
@@ -1449,22 +1251,6 @@
                     font-weight: 700;
                 }
             }
-            &:hover &__bottom{
-                transform: translateY(-20px);
-                border-radius: 0px 0px 20px 20px;
-            }
-            &:hover &__top{
-                border-radius: 20px 20px 0px 0px;
-                transform: translateY(-10px);
-                // border-bottom: 1px solid base.$color-main;
-            }
-            &:hover &__top__bg{
-                transform: translateY(0px);
-                opacity: 1;
-            }
-            &:hover &__top__bg_2{
-                opacity: 1;
-            }
         }
     }
 }
@@ -1479,8 +1265,8 @@
         // margin: auto;
         // margin-bottom: 30px;
         padding:  {
-            top: 100px;
-            bottom: 100px;
+            top: 85px;
+            bottom: 0px;
         };
         box-sizing: border-box;
         &__information {
@@ -1490,7 +1276,7 @@
             }
         }
         &__videoBlock {
-            margin-bottom: 30px;
+            margin-bottom: 40px;
         }
     }
     .products {
@@ -1508,8 +1294,6 @@
                     bottom: 0px;
                     left: 5px;
                 };
-                &__top {
-                }
                 &__number {
                     font-size: 55px;
                     margin-bottom: 10px;
@@ -1544,7 +1328,6 @@
                     &__progressBar {
                         width: 100%;
                         height: 10px;
-                        background-color: rgb(48, 48, 51);
                         margin-top: 10px;
                         overflow: hidden;
                         border-radius: 3px;
@@ -1556,9 +1339,6 @@
                     width: 100%;
                     padding: 10px;
                     transform: translateY(0px);
-                    // background-color: rgba(31, 31, 31, 0.3);
-                    // backdrop-filter: blur(3px);
-                    // border-radius: 10px;
                     margin: {
                         top: 5px;
                         bottom: 5px;
@@ -1567,32 +1347,12 @@
                         padding: 10px;
                         padding-left: 15px;
                         margin: 0;
-                        border-radius: 5px;
-                        background-color: rgba(255, 255, 255, 0.03);
-                        border: 1px solid rgba(255, 255, 255, 0.1);
-                        backdrop-filter: blur(10px);
-                        cursor: pointer;
                         & > li {
                             font-size: 12px;
                             color: rgb(200, 200, 200);
                             text-indent: 5px;
                             padding-top: 2px;
                             padding-bottom: 2px;
-                            &._none {
-                                &::marker {
-                                    content: url(../img/icons/checkMark_time_7_7.png);
-                                }
-                            }
-                            &._true {
-                                &::marker {
-                                    content: url(../img/icons/checkMark_green_8_8.png);
-                                }
-                            }
-                            &._false {
-                                &::marker {
-                                    content: url(../img/icons/checkMark_red_7_7.png);
-                                }
-                            }
                         }
                     }
                     &__string {
@@ -1609,22 +1369,6 @@
                         }
                     }
                 }
-            }
-            &:hover &__bottom{
-                transform: translateY(-20px);
-                border-radius: 0px 0px 20px 20px;
-            }
-            &:hover &__top{
-                border-radius: 20px 20px 0px 0px;
-                transform: translateY(-10px);
-                // border-bottom: 1px solid base.$color-main;
-            }
-            &:hover &__top__bg{
-                transform: translateY(0px);
-                opacity: 1;
-            }
-            &:hover &__top__bg_2{
-                opacity: 1;
             }
         }
     }
@@ -1833,32 +1577,12 @@
                         padding: 10px;
                         padding-left: 15px;
                         margin: 0;
-                        border-radius: 5px;
-                        background-color: rgba(255, 255, 255, 0.03);
-                        border: 1px solid rgba(255, 255, 255, 0.1);
-                        backdrop-filter: blur(10px);
-                        cursor: pointer;
                         & > li {
                             font-size: 10px;
                             color: rgb(200, 200, 200);
                             text-indent: 5px;
                             padding-top: 2px;
                             padding-bottom: 2px;
-                            &._none {
-                                &::marker {
-                                    content: url(../img/icons/checkMark_time_7_7.png);
-                                }
-                            }
-                            &._true {
-                                &::marker {
-                                    content: url(../img/icons/checkMark_green_8_8.png);
-                                }
-                            }
-                            &._false {
-                                &::marker {
-                                    content: url(../img/icons/checkMark_red_7_7.png);
-                                }
-                            }
                         }
                     }
                     &__string {
@@ -1892,22 +1616,6 @@
                     font-size: 18px;
                     font-weight: 700;
                 }
-            }
-            &:hover &__bottom{
-                transform: translateY(-20px);
-                border-radius: 0px 0px 20px 20px;
-            }
-            &:hover &__top{
-                border-radius: 20px 20px 0px 0px;
-                transform: translateY(-10px);
-                // border-bottom: 1px solid base.$color-main;
-            }
-            &:hover &__top__bg{
-                transform: translateY(0px);
-                opacity: 1;
-            }
-            &:hover &__top__bg_2{
-                opacity: 1;
             }
         }
     }
@@ -2024,176 +1732,6 @@
 }
 
 @media screen and (max-width: 400px) {
-    // .products {
-    //     width: 90%;
-    //     // flex-direction: row;
-    //     // flex-wrap: wrap;
-    //     grid-template-columns: repeat(1, minmax(0px, 1fr));
-    //     grid-gap: 10px;
-    //     &__card {
-    //         width: auto;
-    //         flex-direction: column;
-    //         margin-bottom: 10px;
-    //         &__top {
-    //             position: relative;
-    //             z-index: 2;
-    //             width: auto;
-    //             display: flex;
-    //             flex-direction: column;
-    //             justify-content: center;
-    //             align-items: center;
-    //             border-radius: 10px 10px 5px 5px;
-    //             border-bottom: none;
-    //             padding: {
-    //                 top: 15px;
-    //                 bottom: 15px;
-    //                 left: 10px;
-    //                 right: 10px;
-    //             };
-    //             margin-right: 0px;
-    //             margin-bottom: 5px;
-    //             &__top {
-    //                 display: flex;
-    //                 align-items: center;
-    //                 // justify-content: start;
-    //                 flex-direction: column;
-    //             }
-    //             &__number {
-    //                 display: inline-block;
-    //                 font-size: 55px;
-    //                 margin: {
-    //                     top: 0px;
-    //                     right: 0px;
-    //                     bottom: 10px;
-    //                     left: 0px;
-    //                 };
-    //                 padding:  {
-    //                     top: 12px;
-    //                     left: 22px;
-    //                     bottom: 12px;
-    //                     right: 22px;
-    //                 };
-    //             }
-    //             &__eloContainer {
-    //                 display: inline-block;
-    //                 width: auto;
-    //                 height: auto;
-    //                 margin: {
-    //                     // top: 8px;
-    //                     right: 0px;
-    //                     bottom: 0px;
-    //                 };
-    //                 padding: {
-    //                     top: 0px;
-    //                     bottom: 0px;
-    //                     right: 0px;
-    //                     left: 0px;
-    //                 };
-    //                 &__text {
-    //                     display: flex;
-    //                     justify-content: center;
-    //                     align-items: center;
-    //                     &__icon {
-    //                         display: flex;
-    //                         align-items: center;
-    //                         margin-right: 3px;
-    //                         & > img {
-    //                             height: 16px;
-    //                         }
-    //                     }
-    //                     &__number {
-    //                         margin-left: 3px;
-    //                         font-size: 20px;
-    //                         line-height: 15px;
-    //                     }
-    //                 }
-    //                 &__progressBar {
-    //                     // display: none;
-    //                     margin-top: 10px;
-    //                     height: 10px;
-    //                 }
-    //             }
-    //             &__information {
-    //                 display: block;
-    //                 // background-color: base.$color-gray_light;
-    //                 border-radius: 10px;
-    //                 // float: right;
-    //                 width: auto;
-    //                 margin: {
-    //                     top: 8px;
-    //                     bottom: 0px;
-    //                 };
-    //                 padding: {
-    //                     top: 0px;
-    //                     bottom: 0px;
-    //                     right: 0px;
-    //                     left: 0px;
-    //                 };
-    //                 &__string {
-    //                     padding: {
-    //                         top: 0px;
-    //                         bottom: 0px;
-    //                     };
-    //                     &__key {
-    //                         font-size: 14px;
-    //                         margin-right: 2px;
-    //                     }
-    //                     &__value {
-    //                         font-size: 14px;
-    //                     }
-    //                 }
-    //             }
-    //         }
-    //         &__bottom {
-    //             position: relative;
-    //             z-index: 50;
-    //             width: 100%;
-    //             height: 50px;
-    //             border-radius: 5px 5px 10px 10px;
-    //             margin-left: 0px;
-    //             & > button {
-    //                 padding: 0px;
-    //                 font-size: 18px;
-    //                 font-weight: 700;
-    //                 height: 100%;
-    //                 border-radius: inherit;
-    //                 background-color: base.$color-product_card;
-    //                 border: 1px solid base.$color-gray_light__light;
-    //                 border-top: none;
-    //             }
-    //         }
-    //         &:hover &__bottom{
-    //             transform: translateY(0px);
-    //             border-radius: 5px 5px 10px 10px;
-    //         }
-    //         &:hover &__top{
-    //             border-radius: 10px 10px 5px 5px;
-    //             transform: translateY(0px);
-    //         }
-    //         &:hover &__top__bg{
-    //             transform: translateY(0px);
-    //             opacity: 0;
-    //         }
-    //         &:hover &__top__bg_2{
-    //             opacity: 0;
-    //         }
-    //     }
-    //     &_ready {
-    //         .products__card__bottom__button {
-    //             background-color: base.$color-product_card;
-    //             border: 1px solid base.$color-gray_light__light;
-    //         }
-    //     }
-    //     &_preOrder {
-    //         .products__card__bottom__button {
-    //             background-color: base.$color-product_card;
-    //             border: 1px solid base.$color-gray_light__light;
-    //         }
-    //     }
-    //     &_active {
-    //         display: grid;
-    //     }
-    // }
     .header {
         justify-content: center;
         &__nav {
@@ -2277,32 +1815,12 @@
                         padding: 10px;
                         padding-left: 15px;
                         margin: 0;
-                        border-radius: 5px;
-                        background-color: rgba(255, 255, 255, 0.03);
-                        border: 1px solid rgba(255, 255, 255, 0.1);
-                        backdrop-filter: blur(10px);
-                        cursor: pointer;
                         & > li {
                             font-size: 10px;
                             color: rgb(200, 200, 200);
                             text-indent: 5px;
                             padding-top: 2px;
                             padding-bottom: 2px;
-                            &._none {
-                                &::marker {
-                                    content: url(../img/icons/checkMark_time_7_7.png);
-                                }
-                            }
-                            &._true {
-                                &::marker {
-                                    content: url(../img/icons/checkMark_green_8_8.png);
-                                }
-                            }
-                            &._false {
-                                &::marker {
-                                    content: url(../img/icons/checkMark_red_7_7.png);
-                                }
-                            }
                         }
                     }
                     &__string {
@@ -2337,197 +1855,11 @@
                     font-weight: 700;
                 }
             }
-            &:hover &__bottom{
-                transform: translateY(-20px);
-                border-radius: 0px 0px 20px 20px;
-            }
-            &:hover &__top{
-                border-radius: 20px 20px 0px 0px;
-                transform: translateY(-10px);
-                // border-bottom: 1px solid base.$color-main;
-            }
-            &:hover &__top__bg{
-                transform: translateY(0px);
-                opacity: 1;
-            }
-            &:hover &__top__bg_2{
-                opacity: 1;
-            }
         }
     }
 }
 
 @media screen and (max-width: 350px) {
-    // .products {
-    //     width: 90%;
-    //     // flex-direction: row;
-    //     // flex-wrap: wrap;
-    //     grid-template-columns: repeat(2, minmax(0px, 1fr));
-    //     grid-gap: 10px;
-    //     &__card {
-    //         width: auto;
-    //         flex-direction: column;
-    //         margin-bottom: 10px;
-    //         &__top {
-    //             position: relative;
-    //             z-index: 2;
-    //             width: auto;
-    //             display: flex;
-    //             flex-direction: column;
-    //             justify-content: center;
-    //             align-items: center;
-    //             border-radius: 10px 10px 5px 5px;
-    //             border-bottom: none;
-    //             padding: {
-    //                 top: 15px;
-    //                 bottom: 15px;
-    //                 left: 10px;
-    //                 right: 10px;
-    //             };
-    //             margin-right: 0px;
-    //             margin-bottom: 5px;
-    //             &__top {
-    //                 display: flex;
-    //                 align-items: center;
-    //                 // justify-content: start;
-    //                 flex-direction: column;
-    //             }
-    //             &__number {
-    //                 display: inline-block;
-    //                 font-size: 55px;
-    //                 margin: {
-    //                     top: 0px;
-    //                     right: 0px;
-    //                     bottom: 10px;
-    //                     left: 0px;
-    //                 };
-    //                 padding:  {
-    //                     top: 12px;
-    //                     left: 22px;
-    //                     bottom: 12px;
-    //                     right: 22px;
-    //                 };
-    //             }
-    //             &__eloContainer {
-    //                 display: inline-block;
-    //                 width: auto;
-    //                 height: auto;
-    //                 margin: {
-    //                     // top: 8px;
-    //                     right: 0px;
-    //                     bottom: 0px;
-    //                 };
-    //                 padding: {
-    //                     top: 0px;
-    //                     bottom: 0px;
-    //                     right: 0px;
-    //                     left: 0px;
-    //                 };
-    //                 &__text {
-    //                     display: flex;
-    //                     justify-content: center;
-    //                     align-items: center;
-    //                     &__icon {
-    //                         display: flex;
-    //                         align-items: center;
-    //                         margin-right: 3px;
-    //                         & > img {
-    //                             height: 12px;
-    //                         }
-    //                     }
-    //                     &__number {
-    //                         margin-left: 3px;
-    //                         font-size: 16px;
-    //                         line-height: 15px;
-    //                     }
-    //                 }
-    //                 &__progressBar {
-    //                     // display: none;
-    //                     margin-top: 10px;
-    //                     height: 10px;
-    //                 }
-    //             }
-    //             &__information {
-    //                 display: none;
-    //                 // background-color: base.$color-gray_light;
-    //                 border-radius: 10px;
-    //                 // float: right;
-    //                 width: auto;
-    //                 margin: {
-    //                     top: 8px;
-    //                     bottom: 0px;
-    //                 };
-    //                 padding: {
-    //                     top: 0px;
-    //                     bottom: 0px;
-    //                     right: 0px;
-    //                     left: 0px;
-    //                 };
-    //                 &__string {
-    //                     padding: {
-    //                         top: 0px;
-    //                         bottom: 0px;
-    //                     };
-    //                     &__key {
-    //                         font-size: 14px;
-    //                         margin-right: 2px;
-    //                     }
-    //                     &__value {
-    //                         font-size: 14px;
-    //                     }
-    //                 }
-    //             }
-    //         }
-    //         &__bottom {
-    //             position: relative;
-    //             z-index: 50;
-    //             width: 100%;
-    //             height: 50px;
-    //             border-radius: 5px 5px 10px 10px;
-    //             margin-left: 0px;
-    //             & > button {
-    //                 padding: 0px;
-    //                 font-size: 18px;
-    //                 font-weight: 700;
-    //                 height: 100%;
-    //                 border-radius: inherit;
-    //                 background-color: base.$color-product_card;
-    //                 border: 1px solid base.$color-gray_light__light;
-    //                 border-top: none;
-    //             }
-    //         }
-    //         &:hover &__bottom{
-    //             transform: translateY(0px);
-    //             border-radius: 5px 5px 10px 10px;
-    //         }
-    //         &:hover &__top{
-    //             border-radius: 10px 10px 5px 5px;
-    //             transform: translateY(0px);
-    //         }
-    //         &:hover &__top__bg{
-    //             transform: translateY(0px);
-    //             opacity: 0;
-    //         }
-    //         &:hover &__top__bg_2{
-    //             opacity: 0;
-    //         }
-    //     }
-    //     &_ready {
-    //         .products__card__bottom__button {
-    //             background-color: base.$color-product_card;
-    //             border: 1px solid base.$color-gray_light__light;
-    //         }
-    //     }
-    //     &_preOrder {
-    //         .products__card__bottom__button {
-    //             background-color: base.$color-product_card;
-    //             border: 1px solid base.$color-gray_light__light;
-    //         }
-    //     }
-    //     &_active {
-    //         display: grid;
-    //     }
-    // }
     .calculator {
         margin-top: 35px;
         width: 90%;
@@ -2623,6 +1955,27 @@
             }
         }
     }
+    .productCardInfo {
+        &__information {
+            &__top {
+                &__about {
+                    & > p {
+                        font-size: 14px;
+                    }
+                }
+            }
+            &__stats {
+                &__point {
+                    &__type {
+                        font-size: 12px;
+                    }
+                    &__value {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 325px) {
@@ -2658,17 +2011,6 @@
                     & > p {
                         font-weight: 400;
                         color: rgb(200, 200, 200);
-                    }
-                }
-            }
-            &__stats {
-                &__point {
-                    &__type {
-                        font-size: 14px;
-                    }
-                    &__value {
-                        font-size: 18px;
-                        font-weight: 600;
                     }
                 }
             }
@@ -2717,14 +2059,14 @@
                 margin-left: 0;
                 margin-top: 10px;
                 &__price {
-                    margin-right: 10px;
+                    margin-right: 0px;
                     font-size: 18px;
                 }
                 &__button {
                     padding-top: 8px;
                     padding-bottom: 8px;
-                    padding-right: 8px;
-                    padding-left: 8px;
+                    padding-right: 50px;
+                    padding-left: 50px;
                     height: 100%;
                     font-size: 18px;
                 }
@@ -2736,8 +2078,6 @@
         grid-gap: 10px;
         &__card {
             display: block;
-            // width: calc(25% - 46px);
-            // margin: 23px;
             cursor: pointer;
             &__top {
                 margin-bottom: 5px;
@@ -2747,8 +2087,6 @@
                     bottom: 0px;
                     left: 5px;
                 };
-                &__top {
-                }
                 &__number {
                     font-size: 45px;
                     margin-bottom: 10px;
@@ -2783,10 +2121,7 @@
                     &__progressBar {
                         width: 100%;
                         height: 8px;
-                        background-color: rgb(48, 48, 51);
                         margin-top: 10px;
-                        overflow: hidden;
-                        border-radius: 3px;
                     }
                 }
                 &__information {
@@ -2795,9 +2130,6 @@
                     width: 100%;
                     padding: 0px;
                     transform: translateY(0px);
-                    // background-color: rgba(31, 31, 31, 0.3);
-                    // backdrop-filter: blur(3px);
-                    // border-radius: 10px;
                     margin: {
                         top: 10px;
                         bottom: 5px;
@@ -2806,32 +2138,12 @@
                         padding: 10px;
                         padding-left: 15px;
                         margin: 0;
-                        border-radius: 5px;
-                        background-color: rgba(255, 255, 255, 0.03);
-                        border: 1px solid rgba(255, 255, 255, 0.1);
-                        backdrop-filter: blur(10px);
-                        cursor: pointer;
                         & > li {
                             font-size: 10px;
                             color: rgb(200, 200, 200);
                             text-indent: 5px;
                             padding-top: 2px;
                             padding-bottom: 2px;
-                            &._none {
-                                &::marker {
-                                    content: url(../img/icons/checkMark_time_7_7.png);
-                                }
-                            }
-                            &._true {
-                                &::marker {
-                                    content: url(../img/icons/checkMark_green_8_8.png);
-                                }
-                            }
-                            &._false {
-                                &::marker {
-                                    content: url(../img/icons/checkMark_red_7_7.png);
-                                }
-                            }
                         }
                     }
                     &__string {
@@ -2865,22 +2177,6 @@
                     font-size: 18px;
                     font-weight: 700;
                 }
-            }
-            &:hover &__bottom{
-                transform: translateY(-20px);
-                border-radius: 0px 0px 20px 20px;
-            }
-            &:hover &__top{
-                border-radius: 20px 20px 0px 0px;
-                transform: translateY(-10px);
-                // border-bottom: 1px solid base.$color-main;
-            }
-            &:hover &__top__bg{
-                transform: translateY(0px);
-                opacity: 1;
-            }
-            &:hover &__top__bg_2{
-                opacity: 1;
             }
         }
     }
