@@ -5,6 +5,280 @@
         max-width: 1320px;
         margin: auto;
     }
+    // .productCardInfo {
+    //     position: relative;
+    //     z-index: 1;
+    //     margin-top: 150px;
+    //     transition: 0.2s;
+    //     opacity: 1;
+    //     &__information {
+    //         width: 1320px;
+    //         margin: auto;
+    //         &__top {
+    //             width: 100%;
+    //             display: flex;
+    //             margin-bottom: 20px;
+    //             &__this {
+    //                 padding: 10px;
+    //                 &__lvlBlock {
+    //                     display: flex;
+    //                     flex-direction: column;
+    //                     align-items: center;
+    //                     margin-right: 10px;
+    //                     &__num {
+    //                         height: 100%;
+    //                         font-weight: 700;
+    //                         font-size: 55px;
+    //                         border-radius: 10px;
+    //                         background-color: base.$color-main;
+    //                         padding: {
+    //                             right: 40px;
+    //                             left: 40px;
+    //                         };
+    //                         &_preOrder {
+    //                             background-color: base.$color-blue;
+    //                         }
+    //                     }
+    //                     &__elo {
+    //                         display: none;
+    //                         font-weight: 700;
+    //                         margin-top: 5px;
+    //                     }
+    //                 }
+    //                 &__points {
+    //                     & > h3 {
+    //                         font-size: 20px;
+    //                     }
+    //                     & > ul {
+    //                         padding-left: 7px;
+    //                         margin: 0;
+    //                         & > li {
+    //                             font-size: 18px;
+    //                             color: rgb(200, 200, 200);
+    //                             text-indent: 5px;
+    //                         }
+    //                     }
+    //                 }
+    //             }
+    //             &__about {
+    //                 width: calc(60% - 10px);
+    //                 margin-left: 10px;
+    //                 border-radius: 10px;
+    //                 padding: 15px;
+    //                 @include base.block_appearance;
+    //                 & > p {
+    //                     font-weight: 700;
+    //                     font-size: 20px;
+    //                     color: rgb(180, 180, 180);
+    //                 }
+    //             }
+    //         }
+    //         &__rankRange {
+    //             @include base.block_appearance;
+    //             border-radius: 10px;
+    //             padding: 15px;
+    //             padding-top: 10px;
+    //             &__points {
+    //                 display: flex;
+    //                 &__pointLvl {
+    //                     width: 10%;
+    //                     // border-right: 1px solid rgba(255, 255, 255, 0.2);
+    //                     padding: {
+    //                         left: 5px;
+    //                         right: 5px;
+    //                     };
+    //                     margin-bottom: 10px;
+    //                     opacity: 0.5;
+    //                     & > img {
+    //                         transform: scale(0.7);
+    //                         width: 100%;
+    //                     }
+    //                     &_active {
+    //                         opacity: 1;
+    //                         transform: scale(0.8);
+    //                         & > img {
+    //                             transform: translateY(-10px);
+    //                         }
+    //                     }
+    //                 }
+    //             }
+    //             &__range {
+    //                 width: 100%;
+    //                 background-color: base.$color-gray_light;
+    //                 height: 5px;
+    //                 border-radius: 2px;
+    //                 position: relative;
+    //                 // overflow: hidden;
+    //                 &__progress {
+    //                     position: absolute;
+    //                     top: 0;
+    //                     left: 0;
+    //                     bottom: 0;
+    //                     width: calc(90% - 5%);
+    //                     border-radius: 2px;
+    //                     &_ready {
+    //                         background-color: base.$color-main;
+    //                     }
+    //                     &_preOrder {
+    //                         background-color: base.$color-blue;
+    //                     }
+    //                 }
+    //                 &__thumb {
+    //                     position: absolute;
+    //                     top: -3px;
+    //                     bottom: -3px;
+    //                     left: calc(90% - 5%);
+    //                     width: 6px;
+    //                     transform: translateX(-3px);
+    //                     background-color: rgb(255, 255, 255);
+    //                     border-radius: 2px;
+    //                 }
+    //                 &__value {
+    //                     position: absolute;
+    //                     top: -30px;
+    //                     font-weight: 700;
+    //                     left: calc(90% - 5%);
+    //                     transform: translateX(-50%);
+    //                     font-size: 16px;
+    //                 }
+    //             }
+    //         }
+    //         &__stats {
+    //             @include base.grid(20px, 4);
+    //             margin-top: 20px;
+    //             margin-bottom: 20px;
+    //             &__point {
+    //                 @include base.block_appearance;
+    //                 border-radius: 10px;
+    //                 padding: 15px;
+    //                 &__type {
+    //                     color: rgb(200, 200, 200);
+    //                     // color: base.$color-blue;
+    //                     font-size: 18px;
+    //                     margin-bottom: 5px;
+    //                 }
+    //                 &__value {
+    //                     font-size: 20px;
+    //                     font-weight: 600;
+    //                     &_recentResults {
+    //                         display: flex;
+    //                         & > div {
+    //                             margin-right: 5px;
+    //                             &.w {
+    //                                 color: base.$color-w;
+    //                             }
+    //                             &.l {
+    //                                 color: base.$color-l;
+    //                             }
+    //                         }
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //     }
+    //     &_hide {
+    //         opacity: 0.2;
+    //         transform: scale(0.95);
+    //         filter: blur(1px);
+    //     }
+    // }
+    // .information {
+    //     &__buyBlock {
+    //         &__information {
+    //             & > img {
+    //                 height: 50px;
+    //             }
+    //             &__text {
+    //                 & > p {
+    //                     font-size: 18px;
+    //                 }
+    //             }
+    //         }
+    //         &__priceblock {
+    //             &__price {
+    //                 font-size: 30px;
+    //             }
+    //             &__button {
+    //                 height: 100%;
+    //                 background-color: base.$color-main;
+    //                 padding: {
+    //                     left: 50px;
+    //                     right: 50px;
+    //                 };
+    //                 border-radius: 10px;
+    //                 font-weight: 700;
+    //                 font-size: 26px;
+    //                 cursor: pointer;
+    //                 transition: 0.2s;
+    //                 &:hover {
+    //                     background-color: base.$color-main_hover;
+    //                 }
+    //                 &_preOrder {
+    //                     background-color: base.$color-blue;
+    //                     border-radius: 0px 10px 10px 0px;
+    //                     &:hover {
+    //                         background-color: base.$color-blue_hover;
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
+    .banner {
+        // position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        width: 1320px;
+        &__information {
+            width: 100%;
+            // margin-right: 50px;
+            margin-bottom: 20px;
+            & > h2 {
+                text-align: center;
+                font-size: 52px;
+                font-weight: 700;
+                margin-bottom: 20px;
+            }
+            & > p { 
+                font-size: 28px;
+            }
+        }
+        &__videoBlock {
+            width: 95%;
+            margin-bottom: 20px;
+            video {
+                width: 100%;
+                border-radius: 20px;
+            }
+            img {
+                width: 100%;
+                border-radius: 20px;
+            }
+        }
+        &__arrowBlock {
+            display: block;
+            box-sizing: border-box;
+            padding: 12px;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            & > img {
+                width: 100%;
+                transform: translateY(2px);
+            }
+            &_ready {
+                background-color: base.$color-main;
+            }
+            &_preOrder {
+                background-color: base.$color-blue;
+            }
+            &_calculator {
+                background-color: base.$color-green;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 1600px) {
