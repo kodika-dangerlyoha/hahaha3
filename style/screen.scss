@@ -1,5 +1,12 @@
 @use 'base';
 
+@media screen and (min-width: 2000px) {
+    .header {
+        max-width: 1320px;
+        margin: auto;
+    }
+}
+
 @media screen and (max-width: 1600px) {
     .products {
         width: 90%;

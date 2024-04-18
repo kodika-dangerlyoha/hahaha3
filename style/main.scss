@@ -944,7 +944,9 @@ footer {
     display: none;
     &__inner {
         width: 450px;
-        background-color: base.$color-gray_light;
+        // background-color: base.$color-gray_light;
+        background: linear-gradient(to bottom, base.$color-product_card_light, base.$color-product_card);
+        border: 1px solid rgba(255, 255, 255, 0.2);
         border-radius: 20px;
         padding: 20px;
         opacity: 0;
@@ -1022,6 +1024,9 @@ footer {
                         &:hover {
                             background-color: base.$color-main_hover;
                         }
+                        &:active {
+                            transform: scale(0.98);
+                        }
                     }
                     &:nth-last-child(1) {
                         margin-bottom: 0;
@@ -1051,7 +1056,7 @@ footer {
     background-color: base.$color-product_card;
     border: 1px solid base.$color-gray_light;
     box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.5), -1px -1px 5px -2px rgba(255, 255, 255, 0.2);
-    width: calc(1300px - 46px);
+    width: 1320px;
     box-sizing: border-box;
     &__top {
         padding-bottom: 15px;
@@ -1314,5 +1319,10 @@ footer {
                 }
             }
         }
+    }
+    &_hide {
+        opacity: 0.2;
+        transform: scale(0.95);
+        filter: blur(1px);
     }
 }

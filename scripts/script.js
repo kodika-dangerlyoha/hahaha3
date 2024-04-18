@@ -19,7 +19,7 @@ let button_scroll = document.querySelector('#button_scroll');
 function open_purchase(bool) {
     if (bool) {
         purchase.style.display = "flex";
-        information.classList.add('information_hide');
+        information.classList.add('productCardInfo_hide');
         setTimeout(() => {
             purchase__inner.classList.add('purchaseBlock__inner_show');
         }, 1)
@@ -31,7 +31,7 @@ function open_purchase(bool) {
     // information.style.display = "block";
     purchase__inner.classList.remove('purchaseBlock__inner_show');
     setTimeout(() => {
-        information.classList.remove('information_hide');
+        information.classList.remove('productCardInfo_hide');
     }, 1)
     setTimeout(() => {
         purchase.style.display = "none";
