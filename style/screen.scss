@@ -4,6 +4,9 @@
     .header {
         max-width: 1320px;
         margin: auto;
+        &_productPage {
+            width: 1000px;
+        }
     }
     // .productCardInfo {
     //     position: relative;
@@ -277,6 +280,11 @@
             &_calculator {
                 background-color: base.$color-green;
             }
+        }
+    }
+    .footer {
+        &_productPage {
+            width: 1000px;
         }
     }
 }
