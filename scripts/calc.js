@@ -45,12 +45,15 @@ function update_price() {
     calc_old_price.textContent = `${price_old}₽`;
 }
 
-function change_img_lvl(val) {
+function change_img_lvl(val, color, shadow_w, scale) {
     img_lvl.src = `img/lvls/${val}.png`;
-    img_lvl.style.animation = '';
-    setTimeout(() =>  {
-        img_lvl.style.animation = 'show_img_lvl 0.2s ease-in-out 1';
-    }, 0)
+    // img_lvl.style.animation = '';
+    // setTimeout(() =>  {
+    //     img_lvl.style.animation = 'show_img_lvl 0.3s ease-in-out 1';
+    // }, 0)
+    img_lvl.style.boxShadow = `0 0 ${shadow_w}px -2px ${color}`;
+    img_lvl.style.border = `1px solid ${color}`;
+    img_lvl.style.transform = `scale(${scale})`;
 }
 
 function check_elo() {
@@ -63,19 +66,19 @@ function check_elo() {
         btn_order.disabled = false;
         btn_order.textContent = "Заказать";
         if (val < 1351) {
-            change_img_lvl(6);
+            change_img_lvl(6, 'rgb(239, 187, 0)', 10, 1.02);
         }
         else if (val > 1350 && val < 1531) {
-            change_img_lvl(7);
+            change_img_lvl(7, 'rgb(239, 187, 0)', 10, 1.02);
         }
         else if (val > 1530 && val < 1751) {
-            change_img_lvl(8);
+            change_img_lvl(8, '#FF6309', 15, 1.07);
         }
         else if (val > 1750 && val < 2001) {
-            change_img_lvl(9);
+            change_img_lvl(9, '#FF6309', 15, 1.07);
         }
         else if (val > 2000) {
-            change_img_lvl(10);
+            change_img_lvl(10, 'rgb(254, 31, 0)', 20, 1.12);
         }
     }
     else {
@@ -86,6 +89,9 @@ function check_elo() {
         calc_new_price.textContent = "0₽";
         calc_old_price.textContent = "";
         img_lvl.src = 'img/lvls/no.png';
+        img_lvl.style.boxShadow = "0 0 0px #FF6309";
+        img_lvl.style.transform = "scale(1)";
+        img_lvl.style.border = "1px solid transparent";
     }
 }
 
@@ -117,7 +123,7 @@ form_calc.cb_verification.addEventListener('click', () => cb(1000, 'verification
 form_calc.cb_fplus.addEventListener('click', () => cb(200, 'fplus'));
 form_calc.cb_fprem.addEventListener('click', () => cb(450, 'fprem'));
 form_calc.cb_csprime.addEventListener('click', () => cb(1500, 'csprime'));
-form_calc.cb_native_mail.addEventListener('click', () => cb(300, 'csprime'));
+form_calc.cb_native_mail.addEventListener('click', () => cb(300, 'native_mail'));
 form_calc.cb_priority.addEventListener('click', () => cb(percent, 'priority'));
 
 btn_raise.addEventListener('click', () => change_elo(true));
