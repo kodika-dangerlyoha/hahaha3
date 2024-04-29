@@ -34,24 +34,30 @@
                 </div>
             </div>
             <div class="purchaseBlock__inner__form">
-                <form action="">
+                <form action="" name="form_buy">
                     <div class="form__part">
                         <label class="txt" for="email">Ваш Email</label>
-                        <input class="txt" type="email" name="email" id="">
+                        <input class="txt" type="email" name="inp_email" id="">
                     </div>
                     <div class="form__part">
                         <label class="txt">Выбор сервиса оплаты</label>
+                        <input type="checkbox" class="hidden" name="inp_a" value="false">
+                        <input type="checkbox" class="hidden" name="inp_b" value="false">
+                        <input type="checkbox" class="hidden" name="inp_c" value="false">
+                        <input type="checkbox" class="hidden" name="inp_d" value="false">
+                        <input type="checkbox" class="hidden" name="inp_e" value="false">
+                        <input type="checkbox" class="hidden" name="inp_f" value="false">
                         <div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
+                            <label class="" for="inp_a" id="label_a"></label>
+                            <label class="" for="inp_b" id="label_b"></label>
+                            <label class="" for="inp_c" id="label_c"></label>
+                            <label class="" for="inp_d" id="label_d"></label>
+                            <label class="" for="inp_e" id="label_e"></label>
+                            <label class="" for="inp_f" id="label_f"></label>
                         </div>
                     </div>
                     <div class="form__part">
-                        <button class="txt" type="button">Оплатить 2105 ₽</button>
+                        <button class="txt" type="button" disabled>Оплатить 2105 ₽</button>
                     </div>
                 </form>
             </div>
@@ -209,5 +215,6 @@
 	</footer>
 
 	<script type="text/javascript" src="scripts/script.js"></script>
+	<script type="text/javascript" src="scripts/payment.js"></script>
 </body>
 </html>

@@ -8,3 +8,15 @@
         transform: translateY(0px);
     }
 }
+
+@keyframes show_img_lvl {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

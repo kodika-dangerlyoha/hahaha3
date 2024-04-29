@@ -646,55 +646,55 @@
 		</section> -->
 		<section class="products products_calculator calculator" id="products_calculator">
 			<h2 class="hidden">Калькулятор эло</h2>
-			<form class="calculator__inner">
+			<form class="calculator__inner" name="form_calc">
 				<div class="calculator__inner__lvlBlock flex-center">
-					<img src="img/lvls/no.png" alt="">
+					<img src="img/lvls/no.png" alt="" id="img_lvl">
 				</div>
 				<div class="calculator__inner__inputs">
-					<button type="button" class="calculator__inner__inputs__button txt">-25</button>
-					<input type="text" class="calculator__inner__inputs__input txt" placeholder="Ело"></input>
-					<button type="button" class="calculator__inner__inputs__button txt">+25</button>
+					<button type="button" class="calculator__inner__inputs__button txt" name="btn_reduce">-25</button>
+					<input type="text" class="calculator__inner__inputs__input txt" placeholder="Эло" name="inp_elo" min="1200"></input>
+					<button type="button" class="calculator__inner__inputs__button txt" name="btn_raise">+25</button>
 				</div>
 				<div class="calculator__inner__checkBoxes">
 					<div class="calculator__inner__checkBoxes__point">
 						<div>
-							<input type="checkbox">
-							<label class="txt">Верификация</label>
+							<input type="checkbox" name="cb_verification">
+							<label class="txt" for="cb_verification">Верификация</label>
 						</div>
 						<img src="img/icons/info_calc.png" alt="">
 					</div>
 					<div class="calculator__inner__checkBoxes__point">
 						<div>
-							<input type="checkbox">
-							<label class="txt">Приоритет</label>
+							<input type="checkbox" name="cb_priority">
+							<label class="txt" for="cb_priority">Приоритет</label>
 						</div>
 						<img src="img/icons/info_calc.png" alt="">
 					</div>
 					<div class="calculator__inner__checkBoxes__point">
 						<div>
-							<input type="checkbox">
-							<label class="txt">Родная почта</label>
+							<input type="checkbox" name="cb_native_mail">
+							<label class="txt" for="cb_native_mail">Родная почта</label>
 						</div>
 						<img src="img/icons/info_calc.png" alt="">
 					</div>
 					<div class="calculator__inner__checkBoxes__point">
 						<div>
-							<input type="checkbox">
-							<label class="txt">FACEIT Plus</label>
+							<input type="checkbox" name="cb_fplus">
+							<label class="txt" for="cb_fplus">FACEIT Plus</label>
 						</div>
 						<img src="img/icons/info_calc.png" alt="">
 					</div>
 					<div class="calculator__inner__checkBoxes__point">
 						<div>
-							<input type="checkbox">
-							<label class="txt">FACEIT Premium</label>
+							<input type="checkbox" name="cb_fprem">
+							<label class="txt" for="cb_fplus">FACEIT Premium</label>
 						</div>
 						<img src="img/icons/info_calc.png" alt="">
 					</div>
 					<div class="calculator__inner__checkBoxes__point">
 						<div>
-							<input type="checkbox">
-							<label class="txt">CS2 Prime</label>
+							<input type="checkbox" name="cb_csprime">
+							<label class="txt" for="cb_csprime">CS2 Prime</label>
 						</div>
 						<img src="img/icons/info_calc.png" alt="">
 					</div>
@@ -703,15 +703,15 @@
 				<div class="calculator__inner__information">
 					<div class="calculator__inner__information__point">
 						<h3 class="txt">К оплате</h3>
-						<div class="txt">2105₽ <span class="txt">2300₽</span></div>
+						<div class="txt"><span class="txt" id="calc_new_price">0₽</span> <span class="txt" id="calc_old_price"></span></div>
 					</div>
 					<div class="calculator__inner__information__point">
 						<h3 class="txt">Срок выполнения</h3>
-						<div class="txt">15 минут</div>
+						<div class="txt" id="calc_timeline">15 минут</div>
 					</div>
 				</div>
 				<div class="calculator__inner__separator"></div>
-				<button type="button" class="calculator__inner__button txt" disabled>Заказать</button>
+				<button type="button" class="calculator__inner__button txt" name="btn_order" disabled>Эло 1200-2500</button>
 			</form>
 		</section>
 	</main>
@@ -746,5 +746,6 @@
 	</footer>
 
 	<script type="text/javascript" src="scripts/script.js"></script>
+	<script type="text/javascript" src="scripts/calc.js"></script>
 </body>
 </html>

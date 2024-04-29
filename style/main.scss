@@ -608,7 +608,9 @@ footer {
                 &:hover {
                     border: 2px solid base.$color-green;
                 }
-                &:active {}
+                &:active {
+                    transform: scale(0.98);
+                }
             }
         }
         &__checkBoxes {
@@ -701,7 +703,7 @@ footer {
                 & > div {
                     font-size: 26px;
                     font-weight: 700;
-                    & > span {
+                    & > span:nth-child(2) {
                         padding-left: 5px;
                         font-size: 22px;
                         text-decoration: line-through;
@@ -724,28 +726,34 @@ footer {
             width: 230px;
             margin: auto;
             display: block;
-            background-color: base.$color-gray_light__light;
-            // border: 1px solid rgb(71, 71, 71);
-            color: rgb(200, 200, 200);
+            background-color: base.$color-green;
+            color: rgb(255, 255, 255);
+            transition: 0.2s;
+            cursor: pointer;
             border-radius: 10px;
-            cursor: default;
             padding: {
                 top: 15px;
                 bottom: 15px;
             };
             font-weight: 600;
             font-size: 20px;
-            &_active {
-                background-color: base.$color-green;
-                // border: 1px solid base.$color-green;
-                color: rgb(255, 255, 255);
-                transition: 0.2s;
-                cursor: pointer;
+            &:hover {
+                background-color: base.$color-green_hover;
+            }
+            &:active {
+                transform: scale(0.98);
+            }
+            &:disabled {
+                background-color: base.$color-gray_light__light;
+                color: rgb(200, 200, 200);
+                cursor: default;
+                font-size: 16px;
                 &:hover {
-                    background-color: base.$color-green_hover;
-                    // border: 1px solid base.$color-green_hover;
+                    background-color: base.$color-gray_light__light;
                 }
-                &:active {}
+                &:active {
+                    transform: scale(1);
+                }
             }
         }
     }
@@ -968,19 +976,26 @@ footer {
             }
             &__closeBlock {
                 box-sizing: border-box;
-                height: 27px;
-                width: 27px;
+                height: 32px;
+                width: 32px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 opacity: 0.7;
                 transition: 0.2s;
                 cursor: pointer;
+                padding: 8px;
+                border-radius: 50%;
                 & > img {
+                    width: 100%;
                     filter: invert(1);
                 }
                 &:hover {
                     opacity: 1;
+                    background-color: rgb(201, 0, 0);
+                }
+                &:active {
+                    transform: scale(0.95);
                 }
             }
         }
@@ -1001,12 +1016,26 @@ footer {
                     }
                     & > div {
                         @include base.grid(8px, 3);
-                        & > div {
+                        & > label {
+                            display: block;
+                            box-sizing: border-box;
                             width: 100%;
                             background-color: base.$color-gray_light__black;
                             border: 2px solid base.$color-gray_light__light;
                             border-radius: 10px;
                             height: 70px;
+                            transition: 0.2s;
+                            cursor: pointer;
+                            &:hover {
+                                filter: brightness(1.2);
+                            }
+                            &:active {
+                                transform: scale(0.95);
+                            }
+                            &._label_active {
+                                background-color: base.$color-gray_light__light;
+                                border: 2px solid base.$color-main;
+                            }
                         }
                     }
                     & > button {
@@ -1026,6 +1055,17 @@ footer {
                         }
                         &:active {
                             transform: scale(0.98);
+                        }
+                        &:disabled {
+                            opacity: 0.7;
+                            cursor: default;
+                            background-color: base.$color-gray_light__light;
+                            &:hover {
+                                background-color: base.$color-gray_light__light;
+                            }
+                            &:active {
+                                transform: scale(1);
+                            }
                         }
                     }
                     &:nth-last-child(1) {
