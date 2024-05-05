@@ -2,10 +2,6 @@
 // Если эло больше макс автоматом ставится максимальное сзанчение
 // Если эло меньше мин значение то все блокируется и повялестся вопросик
 
-
-
-
-
 let form_calc = document.forms.form_calc;
 let input_elo = form_calc.inp_elo;
 let btn_raise = form_calc.btn_raise;
@@ -90,9 +86,9 @@ function update_price() {
         if (elem.checked) {
             price = prices_option[elem.name](price);
         }
-        console.log(price);
     })
-    calc_new_price.textContent = `${price * sale}₽`;
+
+    calc_new_price.textContent = `${Math.round(price * sale)}₽`;
     calc_old_price.textContent = `${price}₽`;
 
     // if (val < 2501 && val > 1199) { 
@@ -102,7 +98,7 @@ function update_price() {
     btn_order.disabled = false;
     btn_order.textContent = "Заказать";
 
-    if (val < 1351) { // СДЕЛАТЬ СВИТЧ КЕЙС
+    if (val < 1351) {
         change_img_lvl(6, 'rgb(239, 187, 0)', 10, 1.02);
     }
     else if (val > 1350 && val < 1531) {
