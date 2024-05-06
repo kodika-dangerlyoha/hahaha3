@@ -689,12 +689,13 @@ footer {
                     }
                     &__info {
                         position: absolute;
-                        top: calc(100% + 3px);
+                        top: calc(100% + 5px);
                         right: -1px;
                         left: -1px;
                         padding: 8px;
-                        background-color: rgb(50, 50, 50);
-                        border: 1px solid base.$color-gray_light__light;
+                        background-color: rgb(55, 55, 55);
+                        border: 1px solid rgb(75, 75, 75);
+                        box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
                         // border: 1px solid base.$color-green;
                         border-radius: 8px;
     
