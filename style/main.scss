@@ -683,7 +683,7 @@ footer {
                     cursor: help;
                     & > img {
                         width: 20px;
-                        transition: 0.2s;
+                        transition: 0.6s;
                         border: 2px solid transparent;
                         border-radius: 50%;
                     }
@@ -698,11 +698,17 @@ footer {
                         box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
                         // border: 1px solid base.$color-green;
                         border-radius: 8px;
+                        transition: 0s;
+                        transition-delay: 0s;
+                        transform: translateY(5px);
     
                         font-size: 14px;
                         opacity: 0;
                     }
                     &:hover &__info {
+                        transition: 0.2s;
+                        transition-delay: 0.6s;
+                        transform: translateY(0px);
                         opacity: 1;
                     }
                     &:hover img {
