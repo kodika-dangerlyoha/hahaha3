@@ -102,7 +102,7 @@ function change_img_lvl(val, color, shadow_w, scale) {
 
 input_elo.addEventListener('input', change_elo_input);
 
-document.querySelectorAll(`input[type="checkbox"]`).forEach(elem => elem.addEventListener('click', update_price));
+document.querySelectorAll(`input[type="checkbox"]`).forEach(elem => elem.addEventListener('click', () => check_elo(input_elo.value)));
 
 btn_raise.addEventListener('click', () => change_elo_handler(true));
 btn_reduce.addEventListener('click', () => change_elo_handler(false));

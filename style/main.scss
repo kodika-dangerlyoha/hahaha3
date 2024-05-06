@@ -632,6 +632,7 @@ footer {
                 align-items: center;
                 justify-content: space-between;
                 transition: 0.2s;
+                overflow: hidden;
                 & > div {
                     display: flex;
                     & > input {
@@ -676,11 +677,42 @@ footer {
                         font-size: 14px;
                     }
                 }
-                & > img {
-                    width: 20px;
+                &__q {
+                    display: inline-block;
+                    z-index: 4;
+                    cursor: help;
+                    & > img {
+                        width: 20px;
+                        transition: 0.2s;
+                        border: 2px solid transparent;
+                        border-radius: 50%;
+                    }
+                    &__info {
+                        position: absolute;
+                        top: calc(100% + 3px);
+                        right: -1px;
+                        left: -1px;
+                        padding: 8px;
+                        background-color: rgb(50, 50, 50);
+                        border: 1px solid base.$color-gray_light__light;
+                        // border: 1px solid base.$color-green;
+                        border-radius: 8px;
+    
+                        font-size: 14px;
+                        opacity: 0;
+                    }
+                    &:hover &__info {
+                        opacity: 1;
+                    }
+                    &:hover img {
+                        border: 2px solid base.$color-green_hover;
+                        transform: scale(1.1);
+                    }
                 }
                 &:hover {
+                    overflow: visible;
                     background-color: rgb(50, 50, 50);
+                    z-index: 5;
                 }
                 &:active input+label::before {
                     transform: scale(0.9);
